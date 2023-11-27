@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Categorie } from '../video';
 
 @Component({
   selector: 'app-v-categorie',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./v-categorie.component.scss']
 })
 export class VCategorieComponent {
-
+  @Input() categorie: Categorie = { nom: '' };
 }

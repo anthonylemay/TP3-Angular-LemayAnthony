@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-v-nom',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./v-nom.component.scss']
 })
 export class VNomComponent {
-
+  @Input() nom: string = "Nom du Vidéo";
 }

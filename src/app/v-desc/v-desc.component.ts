@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-v-desc',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./v-desc.component.scss']
 })
 export class VDescComponent {
+  @Input() description: string = "Aucune description trouvée";
 
 }

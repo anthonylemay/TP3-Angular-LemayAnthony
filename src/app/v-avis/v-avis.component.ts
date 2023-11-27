@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-v-avis',
@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./v-avis.component.scss']
 })
 export class VAvisComponent {
-
 }

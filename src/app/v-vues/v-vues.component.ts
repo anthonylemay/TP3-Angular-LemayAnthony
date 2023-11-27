@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-v-vues',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./v-vues.component.scss']
 })
 export class VVuesComponent {
+  @Input() vues: number = 0;
 
 }

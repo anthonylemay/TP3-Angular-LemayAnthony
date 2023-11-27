@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-v-avis-note',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./v-avis-note.component.scss']
 })
 export class VAvisNoteComponent {
-
+  @Input() note: number = 0;
 }

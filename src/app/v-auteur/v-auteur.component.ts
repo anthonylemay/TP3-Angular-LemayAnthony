@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-v-auteur',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./v-auteur.component.scss']
 })
 export class VAuteurComponent {
-
+  @Input() pseudo: string = "Aucun Auteur Trouvé";
 }

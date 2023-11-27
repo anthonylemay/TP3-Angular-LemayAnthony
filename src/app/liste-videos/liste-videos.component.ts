@@ -1,6 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import{VIDEOS} from '../mock-videos';
 import { Video } from '../video';
+import {CATEGORIES} from '../mock-categories';
+import {AUTEURS} from '../mock-auteurs';
+
+
 @Component({
   selector: 'app-liste-videos',
   templateUrl: './liste-videos.component.html',
@@ -9,5 +13,20 @@ import { Video } from '../video';
 export class ListeVideosComponent {
 
   videos: Video[] = VIDEOS;
+
+  @Input() video: Video = {
+    nom: "",
+    description: "",
+    code: 0,
+    categories: CATEGORIES[6],
+    auteur: AUTEURS[6],
+    date: new Date,
+    duree: 0,
+    vues: 0,
+    avis:[{
+      note: 0,
+      commentaires: ""
+    }]
+  };
 
 }
