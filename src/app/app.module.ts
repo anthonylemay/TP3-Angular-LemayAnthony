@@ -17,6 +17,7 @@ import { VVuesComponent } from './v-vues/v-vues.component';
 import { VAvisComponent } from './v-avis/v-avis.component';
 import { VAvisNoteComponent } from './v-avis-note/v-avis-note.component';
 import { VAvisCommentaireComponent } from './v-avis-commentaire/v-avis-commentaire.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { VAvisCommentaireComponent } from './v-avis-commentaire/v-avis-commentai
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
