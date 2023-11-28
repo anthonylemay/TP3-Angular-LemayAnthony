@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {VIDEOS} from '../mock-videos';
+import {Video} from '../video';
 
 @Component({
   selector: 'app-accueil',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./accueil.component.scss']
 })
 export class AccueilComponent {
-
+  selectedVideo: Video = VIDEOS[0]
 }

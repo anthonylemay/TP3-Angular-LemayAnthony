@@ -1,22 +1,13 @@
 <header>
 <nav class="flex--inline nav container">
     <img class="nav-logo" src="../../assets/img/fakelogo.svg" alt="logo">
-        <form class="example-form zone">
+        <form class="example-form ">
             <mat-form-field class="searchbar">
               <mat-label>Recherche</mat-label>
               <input matInput placeholder="Ex. Cat Videos" value="">
             </mat-form-field>
             <mat-icon class="i-black search-btn" aria-hidden="false" aria-label="searchbar icon">search</mat-icon>
         </form>
-        <a class="onlineAcc zone flex--inline" href="#">
-        <img class="zone" src="" alt="user_profile">
-        <span class="flex--inline">
-            <h4 class="zone">Nom Complet</h4>
-            <span class="flex--inline zone">
-                <h5>Nom Utilisateur Connecté</h5>
-                <img class="" src="" alt="verified">
-            </span>
-        </span>
-        </a>
+        <app-account [nom]="auteur.nom" [pseudo]="auteur.pseudo" [url_pic]="auteur.url_pic" [verifie]="auteur.verifie"></app-account> 
 </nav>
 </header>

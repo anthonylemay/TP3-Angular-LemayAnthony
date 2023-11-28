@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VAvisComponent } from './v-avis.component';
+import { VImgXlComponent } from './v-img-xl.component';
 
-describe('VAvisComponent', () => {
-  let component: VAvisComponent;
-  let fixture: ComponentFixture<VAvisComponent>;
+describe('VImgXlComponent', () => {
+  let component: VImgXlComponent;
+  let fixture: ComponentFixture<VImgXlComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [VAvisComponent]
+      declarations: [VImgXlComponent]
     });
-    fixture = TestBed.createComponent(VAvisComponent);
+    fixture = TestBed.createComponent(VImgXlComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

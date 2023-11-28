@@ -7,4 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class VAvisCommentaireComponent {
   @Input() commentaire: string = "Aucuns commentaires";
+  @Input() pseudo: string = "Aucun Usager";
+  @Input() verifie: boolean = false; 
+  @Input() url_pic: string = "";
+  @Input() note: number= 0;
+
 }

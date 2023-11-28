@@ -1,0 +1,34 @@
+<section class="listXlVideos">
+  <div class="cardDetails">
+          <app-v-img-xl [url_img]="video.url_img" [closedcaption]="video.closedcaption" [subtitle]="video.subtitle"></app-v-img-xl>
+          <div>
+          <app-v-nom class="padding" [nom]="video.nom"></app-v-nom>
+          <hr>
+          <app-v-vues [vues]="video.vues"></app-v-vues>
+          <app-v-duree [duree]="video.duree"></app-v-duree>
+          </div>
+          <app-v-auteur [pseudo]="video.auteur.pseudo" [verifie]="video.auteur.verifie"></app-v-auteur>
+          <app-v-categorie [categorie]="video.categories"></app-v-categorie>
+          <app-v-desc [description]="video.description"></app-v-desc>
+          <div class="flex--inline"> 
+         </div>
+         <hr>
+          <div class=""> 
+          <app-v-code [code]="video.code"></app-v-code>
+          <app-v-date [date]="video.date"></app-v-date>
+          </div>
+      <div>
+          <h2>Commentaires</h2>
+          <ng-container *ngFor="let avis of video.avis">
+              <div class="flex--inline comments">
+                <app-v-avis-commentaire [commentaire]="avis.commentaires" [pseudo]="avis.auteur.pseudo" [verifie]="avis.auteur.verifie" [url_pic]="avis.auteur.url_pic" [note]="avis.note"> </app-v-avis-commentaire>
+              </div>
+            </ng-container>
+         </div>
+
+
+  </div>
+  <div class="priceInfo">
+
+  </div>
+</section>

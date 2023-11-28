@@ -2,6 +2,7 @@ import {Auteur } from "./auteur";
 
 export const AUTEURS: Auteur[] = [
     {   pseudo:"billyBob",
+        url_pic: "https://api.dicebear.com/7.x/thumbs/svg?seed=Dusty",
         nom: "Bob billy",
         verifie: true,
         coordonnees:[{
@@ -11,10 +12,11 @@ export const AUTEURS: Auteur[] = [
             twitch: "https://www.twitch.tv/bobbilly",
             site_web: "https://bobbilly.com"
         }],
-        description: "Bob from Quebec"
+        description: "Bob de Québec"
     },
     {  pseudo:"MaryGang",
     nom: "Mary Jane",
+    url_pic: "https://api.dicebear.com/7.x/thumbs/svg?seed=Garfield",
     verifie: true,
     coordonnees:[{
         courriel: "mary420@gmail.com",
@@ -23,9 +25,10 @@ export const AUTEURS: Auteur[] = [
         twitch: "https://www.twitch.tv/maryj",
         site_web: "https://420.com"
     }],
-    description: "Love Mary"
+    description: "Mange Prie Aime"
     },
     {  pseudo:"LeoNaldo88",
+    url_pic: "https://api.dicebear.com/7.x/thumbs/svg?seed=Daisy",
     nom: "Leo Naldo",
     verifie: true,
     coordonnees:[{
@@ -35,9 +38,10 @@ export const AUTEURS: Auteur[] = [
         twitch: "https://www.twitch.tv/leleo",
         site_web: "https://entreprisesJ.com"
     }],
-    description: "Leo from Italy, hello world!"
+    description: "Leo d'Italie, bonjour le monde!"
     },
     {  pseudo:"CocoBongo",
+    url_pic: "https://api.dicebear.com/7.x/thumbs/svg?seed=Bella",
     nom: "Corine Bangaran",
     verifie: false,
     coordonnees:[{
@@ -50,6 +54,7 @@ export const AUTEURS: Auteur[] = [
     description: ""
     },
     {  pseudo:"debugDuck",
+    url_pic: "https://api.dicebear.com/7.x/thumbs/svg?seed=Boots",
     nom: "Dean Duckster",
     verifie: false,
     coordonnees:[{
@@ -59,6 +64,6 @@ export const AUTEURS: Auteur[] = [
         twitch: "https://www.twitch.tv/deantheduck",
         site_web: ""
     }],
-    description: "The debug duck knows no limits."
+    description: "Le canard jaune de debug ne connaît pas de limites."
     }
 ]

@@ -18,7 +18,7 @@ export class ListeVideosComponent {
     url_img: "",
     nom: "",
     description: "",
-    code: 0,
+    code: "N/A",
     categories: CATEGORIES[6],
     auteur: AUTEURS[6],
     date: new Date,
@@ -28,6 +28,7 @@ export class ListeVideosComponent {
     closedcaption: false,
     subtitle: false,
     avis:[{
+      auteur: AUTEURS[6],
       note: 0,
       commentaires: ""
     }]

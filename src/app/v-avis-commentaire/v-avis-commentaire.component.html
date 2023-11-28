@@ -1,1 +1,7 @@
-<p>{{commentaire}}</p>
+
+<div><img class="avatar" src="{{url_pic}}" alt="profile pic">
+<h4>{{ pseudo }}<mat-icon *ngIf="verifie" aria-hidden="false" aria-label="Verified icon" fontIcon="verified"></mat-icon></h4>
+</div>
+<p>{{ commentaire }}</p>
+<span><mat-icon aria-hidden="false" aria-label="Star Icon" fontIcon="star"></mat-icon>
+    {{note}}/10</span>

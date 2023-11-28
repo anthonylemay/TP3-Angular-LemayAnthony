@@ -6,8 +6,8 @@ import {AUTEURS} from "./mock-auteurs";
 export const VIDEOS: Video[] =[
     {   url_img: "https://picsum.photos/200/300?random=1",
         nom: "vidéo 1",
-        description: "description film 1",
-        code: 1,
+        description: "description de film 1",
+        code: "ABC001",
         categories: CATEGORIES[0],
         auteur: AUTEURS[3],
         date: new Date("02-11-2003"),
@@ -16,16 +16,30 @@ export const VIDEOS: Video[] =[
         score: 5500,
         closedcaption: true,
         subtitle: true,
-        avis:[{
+        avis:[
+            {
+            auteur: AUTEURS[2],
             note: 9,
             commentaires: "commentaires 1"
-        }]
+        },
+        {
+            auteur: AUTEURS[1],
+            note: 8,
+            commentaires: "commentaires 2"
+        },
+        {
+            auteur: AUTEURS[4],
+            note: 9.5,
+            commentaires: "commentaires 2"
+        },
+
+        ]
         },
         {
         url_img: "https://picsum.photos/200/300?random=2",
         nom: "vidéo 2",
-        description: "description film 2",
-        code: 2,
+        description: "description de film 2",
+        code: "ABC002",
         categories: CATEGORIES[1],
         auteur: AUTEURS[2],
         date: new Date("01-10-1996"),
@@ -35,6 +49,7 @@ export const VIDEOS: Video[] =[
         closedcaption: false,
         subtitle: true,
         avis:[{
+            auteur: AUTEURS[1],
             note: 1,
             commentaires: "commentaires 2"
         }]
@@ -42,8 +57,8 @@ export const VIDEOS: Video[] =[
         {
         url_img: "https://picsum.photos/200/300?random=3",
         nom: "vidéo 3",
-        description: "description film 3",
-        code: 3,
+        description: "description de film 3",
+        code: "ABC003",
         categories: CATEGORIES[4],
         auteur: AUTEURS[4],
         date: new Date("07-12-2020"),
@@ -53,6 +68,7 @@ export const VIDEOS: Video[] =[
         closedcaption: true,
         subtitle: false,
         avis:[{
+            auteur: AUTEURS[4],
             note: 8,
             commentaires: "commentaires 3"
         }]
@@ -60,8 +76,8 @@ export const VIDEOS: Video[] =[
         {
         url_img: "https://picsum.photos/200/300?random=4",
         nom: "vidéo 4",
-        description: "description film 4",
-        code: 4,
+        description: "description de film 4",
+        code: "ABC004",
         categories: CATEGORIES[3],
         auteur: AUTEURS[0],
         date: new Date("11-11-1988"),
@@ -71,6 +87,7 @@ export const VIDEOS: Video[] =[
         closedcaption: false,
         subtitle: false,
         avis:[{
+            auteur: AUTEURS[3],
             note: 7,
             commentaires: "commentaires 4"
         }]
@@ -78,8 +95,8 @@ export const VIDEOS: Video[] =[
         {
             url_img: "https://picsum.photos/200/300?random=5",
             nom: "vidéo 5",
-            description: "description film 5",
-            code: 5,
+            description: "description de film 5",
+            code: "ABC005",
             categories: CATEGORIES[1],
             auteur: AUTEURS[4],
             date: new Date("01-15-2008"),
@@ -89,6 +106,7 @@ export const VIDEOS: Video[] =[
             closedcaption: false,
             subtitle: false,
             avis:[{
+                auteur: AUTEURS[0],
                 note: 10,
                 commentaires: "commentaires 5"
             }]
@@ -96,8 +114,8 @@ export const VIDEOS: Video[] =[
         {
             url_img: "https://picsum.photos/200/300?random=6",
             nom: "vidéo 6",
-            description: "description film 6",
-            code: 6,
+            description: "description de film 6",
+            code: "ABC006",
             categories: CATEGORIES[3],
             auteur: AUTEURS[3],
             date: new Date("04-04-2015"),
@@ -107,6 +125,7 @@ export const VIDEOS: Video[] =[
             closedcaption: false,
             subtitle: false,
             avis:[{
+                auteur: AUTEURS[5],
                 note: 3,
                 commentaires: "commentaires 6"
             }]

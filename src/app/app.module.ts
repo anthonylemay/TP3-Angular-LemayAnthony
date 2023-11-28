@@ -12,9 +12,7 @@ import {MatChipsModule} from '@angular/material/chips';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Page1Component } from './page1/page1.component';
 import { ListeVideosComponent } from './liste-videos/liste-videos.component';
-import { VideoComponent } from './video/video.component';
 import { VNomComponent } from './v-nom/v-nom.component';
 import { VDescComponent } from './v-desc/v-desc.component';
 import { VCodeComponent } from './v-code/v-code.component';
@@ -23,7 +21,6 @@ import { VAuteurComponent } from './v-auteur/v-auteur.component';
 import { VDateComponent } from './v-date/v-date.component';
 import { VDureeComponent } from './v-duree/v-duree.component';
 import { VVuesComponent } from './v-vues/v-vues.component';
-import { VAvisComponent } from './v-avis/v-avis.component';
 import { VAvisNoteComponent } from './v-avis-note/v-avis-note.component';
 import { VAvisCommentaireComponent } from './v-avis-commentaire/v-avis-commentaire.component';
 import { AccueilComponent } from './accueil/accueil.component';
@@ -35,14 +32,15 @@ import { VScoreComponent } from './v-score/v-score.component';
 import { SubtitleComponent } from './subtitle/subtitle.component';
 import { ClosedcaptionComponent } from './closedcaption/closedcaption.component';
 import { VImgComponent } from './v-img/v-img.component';
+import { VideoXlComponent } from './video-xl/video-xl.component';
+import { VImgXlComponent } from './v-img-xl/v-img-xl.component';
+import { AccountComponent } from './account/account.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    Page1Component,
     ListeVideosComponent,
-    VideoComponent,
     VNomComponent,
     VDescComponent,
     VCodeComponent,
@@ -51,7 +49,6 @@ import { VImgComponent } from './v-img/v-img.component';
     VDateComponent,
     VDureeComponent,
     VVuesComponent,
-    VAvisComponent,
     VAvisNoteComponent,
     VAvisCommentaireComponent,
     AccueilComponent,
@@ -62,7 +59,10 @@ import { VImgComponent } from './v-img/v-img.component';
     VScoreComponent,
     SubtitleComponent,
     ClosedcaptionComponent,
-    VImgComponent
+    VImgComponent,
+    VideoXlComponent,
+    VImgXlComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,

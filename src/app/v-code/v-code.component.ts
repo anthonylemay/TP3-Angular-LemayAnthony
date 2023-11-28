@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./v-code.component.scss']
 })
 export class VCodeComponent {
-  @Input() code: number = 0;
+  @Input() code: string = "N/A";
 }

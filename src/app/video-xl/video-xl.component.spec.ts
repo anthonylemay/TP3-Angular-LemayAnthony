@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VideoComponent } from './video.component';
+import { VideoXlComponent } from './video-xl.component';
 
-describe('VideoComponent', () => {
-  let component: VideoComponent;
-  let fixture: ComponentFixture<VideoComponent>;
+describe('VideoXlComponent', () => {
+  let component: VideoXlComponent;
+  let fixture: ComponentFixture<VideoXlComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [VideoComponent]
+      declarations: [VideoXlComponent]
     });
-    fixture = TestBed.createComponent(VideoComponent);
+    fixture = TestBed.createComponent(VideoXlComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

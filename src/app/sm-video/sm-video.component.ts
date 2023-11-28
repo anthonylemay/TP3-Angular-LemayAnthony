@@ -12,7 +12,7 @@ export class SmVideoComponent {
       url_img: "",
       nom: "Aucun Nom",
       description: "Aucune Description",
-      code: 0,
+      code: "N/A",
       categories: CATEGORIES[6],
       auteur: AUTEURS[6],
       date: new Date,
@@ -22,6 +22,7 @@ export class SmVideoComponent {
       score: 0,
       vues: 0,
       avis:[{
+        auteur: AUTEURS[6],
         note: 0,
         commentaires: "Aucuns Commentaires Trouvés"
       }]

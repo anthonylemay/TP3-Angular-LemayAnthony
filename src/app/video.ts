@@ -6,7 +6,7 @@ export interface Video {
     url_img: string;
     nom: string;
     description: string;
-    code: number;
+    code: string;
     categories: Categorie;
     auteur: Auteur;
     date: Date;
