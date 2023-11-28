@@ -1,27 +1,73 @@
-# AppVideosAnthonylemay
+https://trello.com/invite/b/suSWSWHK/ATTI9da6c50216d57ca52d7304deba267abf9E2B38FC/tp1-angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.7.
 
-## Development server
+# TP1 - Angular - Lemay Anthony - Programmation Web
+Travail Pratique #1 du cours de Programmation Web 3, Automne 2023.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Mandat
 
-## Code scaffolding
+Créer un site web interactif en utilisant le framework Angular et la matière vue en classe.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Cours
 
-## Build
+Programmation Web 3, Automne 2023. AEC en développement Front-End Hiver 2023 Cohorte 01050
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Réalisation
 
-## Running unit tests
+Anthony Lemay ID#6206911
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Présenté à:
 
-## Running end-to-end tests
+Carine Croteau, Enseignante Cégep de TR. 2023.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+Liste des composantes Angular Material utilisées
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Icônes Angular:
+
+https://material.angular.io/components/icon/overview
+
+Cartes Angular:
+https://material.angular.io/components/card/overview
+
+Barre de recherche:
+https://material.angular.io/components/input/overview
+
+Pastilles chips:
+
+https://material.angular.io/components/chips/overview
+
+
+Icônes Google:
+https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined%3Asearch%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4024
+https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined%3Asubtitles%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4024
+https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined%3Aclosed_caption%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4024
+https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined%3Averified%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4024
+https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined%3Afavorite%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4024
+https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined%3Astar%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4024
+https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined%3Ahome%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4024
+https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined%3Ahistory%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4024
+
+Images Lorem Picsum:
+
+https://picsum.photos/
+
+Avatars:
+
+https://www.stefanjudis.com/blog/apis-to-generate-random-user-avatars/
+
+
+Logo fictif créé sur mesure dans Adobe Illustrator.
+
+Framework Angular v16.2.7.
+
+Lien Trello
+
+https://trello.com/invite/b/suSWSWHK/ATTI9da6c50216d57ca52d7304deba267abf9E2B38FC/tp1-angular
+
+
+Lien GitHub Repo
+
+https://github.com/anthonylemay/TP1-Angular-LemayAnthony
+
+Un gros merci! À bientôt! 
