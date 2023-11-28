@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import {Auteur} from '../auteur';
 
 @Component({
   selector: 'app-v-auteur',
@@ -7,4 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class VAuteurComponent {
   @Input() pseudo: string = "Aucun Auteur Trouvé";
+  @Input() verifie: boolean = false;
 }

@@ -5,6 +5,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+import {MatChipsModule} from '@angular/material/chips';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +26,15 @@ import { VVuesComponent } from './v-vues/v-vues.component';
 import { VAvisComponent } from './v-avis/v-avis.component';
 import { VAvisNoteComponent } from './v-avis-note/v-avis-note.component';
 import { VAvisCommentaireComponent } from './v-avis-commentaire/v-avis-commentaire.component';
+import { AccueilComponent } from './accueil/accueil.component';
+import { HeaderComponent } from './header/header.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { CategorieChipsComponent } from './categorie-chips/categorie-chips.component';
+import { SmVideoComponent } from './sm-video/sm-video.component';
+import { VScoreComponent } from './v-score/v-score.component';
+import { SubtitleComponent } from './subtitle/subtitle.component';
+import { ClosedcaptionComponent } from './closedcaption/closedcaption.component';
+import { VImgComponent } from './v-img/v-img.component';
 
 
 @NgModule({
@@ -40,14 +53,27 @@ import { VAvisCommentaireComponent } from './v-avis-commentaire/v-avis-commentai
     VVuesComponent,
     VAvisComponent,
     VAvisNoteComponent,
-    VAvisCommentaireComponent
+    VAvisCommentaireComponent,
+    AccueilComponent,
+    HeaderComponent,
+    SidebarComponent,
+    CategorieChipsComponent,
+    SmVideoComponent,
+    VScoreComponent,
+    SubtitleComponent,
+    ClosedcaptionComponent,
+    VImgComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    MatInputModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

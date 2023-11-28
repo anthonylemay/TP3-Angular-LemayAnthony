@@ -1,0 +1,56 @@
+header {
+    margin: 0;
+    padding: 2rem;
+    background-color: grey;
+    color: white;
+}
+
+.nav.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.zone {
+    border: solid 2px black;
+    padding: 1rem;
+    margin:.5rem;
+}
+
+.nav-logo{
+    width:15%;
+}
+
+.flex--inline {
+    display: inline-flex;
+    align-items: center;
+}
+
+.flex--col {
+    display: flex;
+    flex-direction: column;
+}
+
+.searchbar{
+    width:90%;
+}
+
+.search-btn{
+    padding-left: 10px;
+
+}
+
+.example-form {
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+
+  .i-black{
+    color:black;
+  }

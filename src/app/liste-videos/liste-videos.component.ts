@@ -15,6 +15,7 @@ export class ListeVideosComponent {
   videos: Video[] = VIDEOS;
 
   @Input() video: Video = {
+    url_img: "",
     nom: "",
     description: "",
     code: 0,
@@ -23,6 +24,9 @@ export class ListeVideosComponent {
     date: new Date,
     duree: 0,
     vues: 0,
+    score: 0,
+    closedcaption: false,
+    subtitle: false,
     avis:[{
       note: 0,
       commentaires: ""

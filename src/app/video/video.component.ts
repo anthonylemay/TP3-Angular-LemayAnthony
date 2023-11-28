@@ -9,6 +9,7 @@ import { AUTEURS } from '../mock-auteurs';
 })
 export class VideoComponent {
   @Input() video: Video = {
+    url_img: "",
     nom: "Aucun Nom",
     description: "Aucune Description",
     code: 0,
@@ -16,6 +17,9 @@ export class VideoComponent {
     auteur: AUTEURS[6],
     date: new Date,
     duree: 0,
+    closedcaption: false,
+    subtitle: false,
+    score: 0,
     vues: 0,
     avis:[{
       note: 0,

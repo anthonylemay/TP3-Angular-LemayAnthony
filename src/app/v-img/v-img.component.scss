@@ -1,0 +1,21 @@
+.smCardImg{
+    width:100%;
+    max-height:200px;
+    object-fit: cover;
+    margin:0;
+
+}
+
+.flex{
+    display:flex;
+    flex-direction:column;
+}
+
+.ccsub{
+    display:inline-flex;
+    align-items:center;
+    position:relative;
+    top:0;
+    left:0;
+    color:black;
+}

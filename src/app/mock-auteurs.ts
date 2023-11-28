@@ -3,7 +3,7 @@ import {Auteur } from "./auteur";
 export const AUTEURS: Auteur[] = [
     {   pseudo:"billyBob",
         nom: "Bob billy",
-        verifie: false,
+        verifie: true,
         coordonnees:[{
             courriel: "bobbilly@gmail.com",
             facebook: "https://facebook.com/bobbilly",

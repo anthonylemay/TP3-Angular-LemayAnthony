@@ -3,6 +3,7 @@ import {Auteur} from "./auteur"
 
 
 export interface Video {
+    url_img: string;
     nom: string;
     description: string;
     code: number;
@@ -10,6 +11,9 @@ export interface Video {
     auteur: Auteur;
     date: Date;
     duree: number;
+    closedcaption: boolean;
+    subtitle: boolean;
+    score: number;
     vues: number;
     avis: Avis[];
 }
