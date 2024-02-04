@@ -8,7 +8,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import {MatChipsModule} from '@angular/material/chips';
-
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -38,6 +38,9 @@ import { VImgXlComponent } from './v-img-xl/v-img-xl.component';
 import { AccountComponent } from './account/account.component';
 import { AjoutAvisComponent } from './ajout-avis/ajout-avis.component';
 import { FormVideoComponent } from './form-video/form-video.component';
+import { DureeVidPipe } from './duree-vid.pipe';
+import { ViewCountPipe } from './view-count.pipe';
+
 
 
 @NgModule({
@@ -67,7 +70,9 @@ import { FormVideoComponent } from './form-video/form-video.component';
     VImgXlComponent,
     AccountComponent,
     AjoutAvisComponent,
-    FormVideoComponent
+    FormVideoComponent,
+    DureeVidPipe,
+    ViewCountPipe
   ],
   imports: [
     BrowserModule,
@@ -78,7 +83,8 @@ import { FormVideoComponent } from './form-video/form-video.component';
     MatInputModule,
     MatFormFieldModule,
     FormsModule,
-    MatChipsModule
+    MatChipsModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
