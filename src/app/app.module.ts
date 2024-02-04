@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
-import {MatCardModule} from '@angular/material/card';
-import {MatIconModule} from '@angular/material/icon';
-import {MatInputModule} from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
+import {MatCardModule} from '@angular/material/card';
 import {MatChipsModule} from '@angular/material/chips';
+
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,6 +36,8 @@ import { VImgComponent } from './v-img/v-img.component';
 import { VideoXlComponent } from './video-xl/video-xl.component';
 import { VImgXlComponent } from './v-img-xl/v-img-xl.component';
 import { AccountComponent } from './account/account.component';
+import { AjoutAvisComponent } from './ajout-avis/ajout-avis.component';
+import { FormVideoComponent } from './form-video/form-video.component';
 
 
 @NgModule({
@@ -62,7 +65,9 @@ import { AccountComponent } from './account/account.component';
     VImgComponent,
     VideoXlComponent,
     VImgXlComponent,
-    AccountComponent
+    AccountComponent,
+    AjoutAvisComponent,
+    FormVideoComponent
   ],
   imports: [
     BrowserModule,
