@@ -5,7 +5,7 @@ export interface Auteur {
     nom:string;
     pseudo: string;
     verifie: boolean;
-    coordonnees: Coordonnee[];
+    coordonnees: Coordonnee;
     description: string;
     url_pic: string;
 }

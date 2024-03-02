@@ -22,13 +22,13 @@ export class FormVideoComponent {
       nom: "",
       pseudo: "",
       verifie: false,
-      coordonnees: [{
+      coordonnees: {
         courriel: "",
         facebook: "",
         instagram: "",
         twitch: "",
         site_web: ""
-      }],
+      },
       description: "",
     },
     date: new (Date),
@@ -49,13 +49,13 @@ export class FormVideoComponent {
           nom:"",
           pseudo: "",
           verifie: false,
-          coordonnees: [{
+          coordonnees: {
             courriel: "",
             facebook: "",
             instagram: "",
             twitch: "",
             site_web: ""
-          }],
+          },
           description: ""
         }
         }]

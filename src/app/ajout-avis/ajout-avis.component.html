@@ -1,16 +1,17 @@
 <div class="avisBox">
-    <h2>Donnez-nous votre avis</h2>
-<form class="ajout-avis-form">
+  <h2>Donnez-nous votre avis</h2>
+  <form class="ajout-avis-form">
+    
+        <button (click)="like()" value="like"><mat-icon matSuffix>like</mat-icon></button>
+        <button (click)="dislike()"  value="dislike"><mat-icon matSuffix>dislike</mat-icon></button>
+        <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Commentaires</mat-label>
+        <input matInput name="commentaires" [(ngModel)]="ajoutavis.commentaire">
+        <mat-icon matSuffix>chat</mat-icon>
+        </mat-form-field>
 
-    <button (click)="like()" value="like"><mat-icon matSuffix>like</mat-icon></button>
-       <button (click)="dislike()"  value="dislike"><mat-icon matSuffix>dislike</mat-icon></button>
+        <button (click) = "submit()">Button</button>
+  </form>
 
-      <mat-form-field class="example-full-width" appearance="fill">
-       <mat-label>Commentaires</mat-label>
-       <input matInput name="commentaires" [(ngModel)]="ajoutavis.commentaire">
-       <mat-icon matSuffix>chat</mat-icon>
-     </mat-form-field>
-
-       <button (click) = "submit()">Button</button>
-</form>
 </div>
+
