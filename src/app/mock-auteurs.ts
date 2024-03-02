@@ -1,7 +1,9 @@
 import {Auteur } from "./auteur";
 
 export const AUTEURS: Auteur[] = [
-    {   pseudo:"billyBob",
+    {
+        id: 1,
+        pseudo:"billyBob",
         url_pic: "https://api.dicebear.com/7.x/thumbs/svg?seed=Dusty",
         nom: "Bob billy",
         verifie: true,
@@ -14,7 +16,9 @@ export const AUTEURS: Auteur[] = [
         }],
         description: "Bob de Québec"
     },
-    {  pseudo:"MaryGang",
+    { 
+        id: 2,
+        pseudo:"MaryGang",
     nom: "Mary Jane",
     url_pic: "https://api.dicebear.com/7.x/thumbs/svg?seed=Garfield",
     verifie: true,
@@ -27,7 +31,9 @@ export const AUTEURS: Auteur[] = [
     }],
     description: "Mange Prie Aime"
     },
-    {  pseudo:"LeoNaldo88",
+    { 
+        id: 3,
+        pseudo:"LeoNaldo88",
     url_pic: "https://api.dicebear.com/7.x/thumbs/svg?seed=Daisy",
     nom: "Leo Naldo",
     verifie: true,
@@ -40,7 +46,9 @@ export const AUTEURS: Auteur[] = [
     }],
     description: "Leo d'Italie, bonjour le monde!"
     },
-    {  pseudo:"CocoBongo",
+    {   
+        id: 4,
+        pseudo:"CocoBongo",
     url_pic: "https://api.dicebear.com/7.x/thumbs/svg?seed=Bella",
     nom: "Corine Bangaran",
     verifie: false,
@@ -53,7 +61,8 @@ export const AUTEURS: Auteur[] = [
     }],
     description: ""
     },
-    {  pseudo:"debugDuck",
+    {  id:5,
+        pseudo:"debugDuck",
     url_pic: "https://api.dicebear.com/7.x/thumbs/svg?seed=Boots",
     nom: "Dean Duckster",
     verifie: false,

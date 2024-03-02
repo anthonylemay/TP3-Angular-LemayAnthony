@@ -3,23 +3,19 @@ import {Auteur} from "./auteur"
 
 
 export interface Video {
+    id: number;
     url_img: string;
     nom: string;
     description: string;
     code: string;
-    categories: Categorie;
+    categorie_id: number;
     auteur: Auteur;
     date: Date;
     duree: number;
+    vues: number;
+    score: number;
     closedcaption: boolean;
     subtitle: boolean;
-    score: number;
-    vues: number;
     avis: Avis[];
 }
-
-export interface Categorie {
-    nom: string;
-}
-
 

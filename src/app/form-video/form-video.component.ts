@@ -10,15 +10,14 @@ import { Avis } from '../avis';
 export class FormVideoComponent {
 
   formVideo: Video = {
-
+    id: 0,
     url_img: "",
     nom: "",
     description: "",
     code: "",
-    categories: {
-      nom: "",
-    },
+    categorie_id: 0,
     auteur: { // Ici va falloir que je regarde si je met une fonction pour aller chercher les infos de l'usager qui est connecté. 
+      id: 0,
       url_pic: "",
       nom: "",
       pseudo: "",
@@ -39,9 +38,13 @@ export class FormVideoComponent {
     score: 0,
     vues: 0,
     avis:[{
+        id: 0,
+        reaction: null,
+        date: null,
         note: 0,
         commentaires: "",
         auteur:{
+          id: 0,
           url_pic: "",
           nom:"",
           pseudo: "",

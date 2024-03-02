@@ -1,10 +1,11 @@
 import { Coordonnee } from "./coordonnee";
 
 export interface Auteur {
-    url_pic: string;
+    id:number;
     nom:string;
     pseudo: string;
     verifie: boolean;
     coordonnees: Coordonnee[];
     description: string;
+    url_pic: string;
 }

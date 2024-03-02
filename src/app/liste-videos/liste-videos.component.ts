@@ -15,11 +15,12 @@ export class ListeVideosComponent {
   videos: Video[] = VIDEOS;
 
   @Input() video: Video = {
+    id: 0,
     url_img: "",
     nom: "",
     description: "",
     code: "N/A",
-    categories: CATEGORIES[6],
+    categorie_id: 0,
     auteur: AUTEURS[6],
     date: new Date,
     duree: 0,
@@ -28,8 +29,11 @@ export class ListeVideosComponent {
     closedcaption: false,
     subtitle: false,
     avis:[{
+      id: 0,
       auteur: AUTEURS[6],
       note: 0,
+      reaction: null,
+      date: null,
       commentaires: ""
     }]
   };

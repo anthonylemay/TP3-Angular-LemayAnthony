@@ -1,12 +1,12 @@
 https://trello.com/invite/b/suSWSWHK/ATTI9da6c50216d57ca52d7304deba267abf9E2B38FC/tp1-angular
 
 
-# TP1 - Angular - Lemay Anthony - Programmation Web
+# TP3 - Angular - Lemay Anthony - Programmation Web
 Travail Pratique #1 du cours de Programmation Web 3, Automne 2023.
 
 Mandat
 
-Créer un site web interactif en utilisant le framework Angular et la matière vue en classe.
+Créer un site web interactif lié à l'API créé précédemment dans le cours.
 
 Cours
 
@@ -63,11 +63,11 @@ Framework Angular v16.2.7.
 
 Lien Trello
 
-https://trello.com/invite/b/suSWSWHK/ATTI9da6c50216d57ca52d7304deba267abf9E2B38FC/tp1-angular
+https://trello.com/invite/b/O0aBzVfh/ATTIb3f6b49641d766612daf4621d934038aBF0ADEA7/tp3-angular
 
 
 Lien GitHub Repo
 
-https://github.com/anthonylemay/TP1-Angular-LemayAnthony
+https://github.com/anthonylemay/TP3-Angular-LemayAnthony
 
 Un gros merci! À bientôt! 

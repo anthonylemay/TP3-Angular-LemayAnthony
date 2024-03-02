@@ -9,11 +9,12 @@ import { AUTEURS } from '../mock-auteurs';
 })
 export class SmVideoComponent {
     @Input() video: Video = {
+      id: 0,
       url_img: "",
       nom: "Aucun Nom",
       description: "Aucune Description",
       code: "N/A",
-      categories: CATEGORIES[6],
+      categorie_id: 0,
       auteur: AUTEURS[6],
       date: new Date,
       duree: 0,
@@ -22,6 +23,9 @@ export class SmVideoComponent {
       score: 0,
       vues: 0,
       avis:[{
+        id: 0,
+        reaction: null,
+        date: null,
         auteur: AUTEURS[6],
         note: 0,
         commentaires: "Aucuns Commentaires Trouvés"

@@ -1,6 +1,8 @@
-import {Categorie } from "./video";
+// import {Categorie } from "./video";
 
-export const CATEGORIES: Categorie[] = [
+export const CATEGORIES = [] = [];
+
+/* export const CATEGORIES: Categorie[] = [
     {nom: "Horreur"},
     {nom: "Humour"},
     {nom: "Comédie"},
@@ -8,3 +10,5 @@ export const CATEGORIES: Categorie[] = [
     {nom: "Documentaire"},
     {nom: "Aucune"}
 ];
+
+*/

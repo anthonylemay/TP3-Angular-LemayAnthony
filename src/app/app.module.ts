@@ -40,6 +40,8 @@ import { AjoutAvisComponent } from './ajout-avis/ajout-avis.component';
 import { FormVideoComponent } from './form-video/form-video.component';
 import { DureeVidPipe } from './duree-vid.pipe';
 import { ViewCountPipe } from './view-count.pipe';
+import { AProposComponent } from './a-propos/a-propos.component';
+import { GestionVideosComponent } from './gestion-videos/gestion-videos.component';
 
 
 
@@ -72,7 +74,9 @@ import { ViewCountPipe } from './view-count.pipe';
     AjoutAvisComponent,
     FormVideoComponent,
     DureeVidPipe,
-    ViewCountPipe
+    ViewCountPipe,
+    AProposComponent,
+    GestionVideosComponent
   ],
   imports: [
     BrowserModule,
