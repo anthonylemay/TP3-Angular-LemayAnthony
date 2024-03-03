@@ -3,6 +3,7 @@ import{VIDEOS} from '../mock-videos';
 import { Video } from '../video';
 import {AUTEURS} from '../mock-auteurs';
 import {CATEGORIES} from '../mock-categories';
+import { VideoService } from '../video.service';
 
 @Component({
   selector: 'app-liste-videos',
@@ -11,7 +12,15 @@ import {CATEGORIES} from '../mock-categories';
 })
 export class ListeVideosComponent {
 
-  videos: Video[] = VIDEOS;
+  videos: Video[] = [];
+
+  constructor (private videoService : VideoService) {}
+
+  ngOnInit(): void {
+    this.videoService.getVideos()
+    .subscribe(resultat => this.videos = resultat);
+  }
+
 
   @Input() video: Video = {
     id: 0,
