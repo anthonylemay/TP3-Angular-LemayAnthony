@@ -10,7 +10,7 @@ import { Video } from '../video';
 })
 export class FicheVideoComponent implements OnInit {
 
-  selectedVideo: Video | null = null; // Adjusted to hold a single Video object or null
+  selectedVideo: Video | null = null;
 
   constructor(private videoService: VideoService, private route: ActivatedRoute) {}
 
@@ -21,7 +21,7 @@ export class FicheVideoComponent implements OnInit {
   getVideo(): void {
     const id = this.route.snapshot.paramMap.get('id'); // valider la possibilité d'un null. 
     if (id) {
-      this.videoService.getVideoById(+id) // Assuming getVideoById expects a number
+      this.videoService.getVideoById(+id) 
        .subscribe(resultat => this.selectedVideo = resultat);
     }
   }

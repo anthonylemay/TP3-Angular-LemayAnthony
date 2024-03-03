@@ -29,7 +29,6 @@ import { VAvisCommentaireComponent } from './v-avis-commentaire/v-avis-commentai
 import { AccueilComponent } from './accueil/accueil.component';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { CategorieChipsComponent } from './categorie-chips/categorie-chips.component';
 import { SmVideoComponent } from './sm-video/sm-video.component';
 import { VScoreComponent } from './v-score/v-score.component';
 import { SubtitleComponent } from './subtitle/subtitle.component';
@@ -66,7 +65,6 @@ import { FicheVideoComponent } from './fiche-video/fiche-video.component';
     AccueilComponent,
     HeaderComponent,
     SidebarComponent,
-    CategorieChipsComponent,
     SmVideoComponent,
     VScoreComponent,
     SubtitleComponent,
