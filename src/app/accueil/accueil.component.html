@@ -1,3 +1,6 @@
 
-        <app-liste-videos></app-liste-videos>
+<section class="listSmVideos">
+        <h1>Vidéos populaires</h1>
+        <app-sm-video *ngFor="let v of popularVideos" [video]="v"></app-sm-video>
+</section>
        

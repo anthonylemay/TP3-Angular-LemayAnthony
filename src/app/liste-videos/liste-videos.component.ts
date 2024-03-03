@@ -1,8 +1,5 @@
 import { Component, Input } from '@angular/core';
-import{VIDEOS} from '../mock-videos';
 import { Video } from '../video';
-import {AUTEURS} from '../mock-auteurs';
-import {CATEGORIES} from '../mock-categories';
 import { VideoService } from '../video.service';
 import { Categorie } from '../categorie';
 
@@ -38,7 +35,7 @@ export class ListeVideosComponent {
     if (categoryId) {
       this.filteredVideos = this.videos.filter(v => v.categorie.id === categoryId);
     } else {
-      this.filteredVideos = [...this.videos]; // Reset to all videos
+      this.filteredVideos = [...this.videos]; // Reset à tout voir
     }
   }
   

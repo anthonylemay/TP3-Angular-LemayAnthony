@@ -1,6 +1,9 @@
 <h3 #tooltip="matTooltip" 
-    matTooltip="{{ vues }} vue(s)"
+    [matTooltip]="vues === 0 ? 'Aucun Visionnement' : vues + ' vue(s)'"
     [matTooltipPosition]="position"
     matTooltipHideDelay="5">
-    {{ vues | viewCount }} {{vues | i18nPlural: viewCountMapping }}
+    <ng-container *ngIf="vues > 0; else noViews">
+        {{ vues | viewCount }} {{ vues | i18nPlural: viewCountMapping }}
+    </ng-container>
+    <ng-template #noViews>Aucun Visionnement</ng-template>
 </h3>
