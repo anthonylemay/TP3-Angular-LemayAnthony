@@ -14,7 +14,7 @@ export class SmVideoComponent {
       nom: "Aucun Nom",
       description: "Aucune Description",
       code: "N/A",
-      categorie_id: 0,
+      categorie: CATEGORIES[0],
       auteur: AUTEURS[6],
       date: new Date,
       duree: 0,

@@ -2,11 +2,11 @@
   <h2>Donnez-nous votre avis</h2>
   <form class="ajout-avis-form">
     
-        <button (click)="like()" value="like"><mat-icon matSuffix>like</mat-icon></button>
-        <button (click)="dislike()"  value="dislike"><mat-icon matSuffix>dislike</mat-icon></button>
-        <mat-form-field class="example-full-width" appearance="fill">
+    <button (click)="like()" type="button"><mat-icon matSuffix>thumb_up</mat-icon></button>
+    <button (click)="dislike()" type="button"><mat-icon matSuffix>thumb_down</mat-icon></button>
+     <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Commentaires</mat-label>
-        <input matInput name="commentaires" [(ngModel)]="ajoutavis.commentaire">
+        <input matInput name="commentaires" [(ngModel)]="ajoutavis.commentaires">
         <mat-icon matSuffix>chat</mat-icon>
         </mat-form-field>
 

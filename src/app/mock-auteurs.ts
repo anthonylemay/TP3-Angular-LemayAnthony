@@ -1,6 +1,6 @@
 import {Auteur } from "./auteur";
 
-export const AUTEURS: Auteur[] = [
+export const AUTEURS = [
     {
         id: 1,
         pseudo:"billyBob",

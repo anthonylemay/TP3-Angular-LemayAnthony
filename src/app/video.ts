@@ -1,6 +1,6 @@
 import {Avis} from "./avis"
 import {Auteur} from "./auteur"
-
+import {Categorie} from "./categorie"
 
 export interface Video {
     id: number;
@@ -8,7 +8,7 @@ export interface Video {
     nom: string;
     description: string;
     code: string;
-    categorie_id: number;
+    categorie: Categorie;
     auteur: Auteur;
     date: Date;
     duree: number;
@@ -18,4 +18,3 @@ export interface Video {
     subtitle: boolean;
     avis: Avis[];
 }
-

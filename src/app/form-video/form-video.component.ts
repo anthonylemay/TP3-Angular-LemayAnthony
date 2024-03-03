@@ -15,7 +15,10 @@ export class FormVideoComponent {
     nom: "",
     description: "",
     code: "",
-    categorie_id: 0,
+    categorie: {
+      id: 0,
+      nom: "",
+    },
     auteur: { // Ici va falloir que je regarde si je met une fonction pour aller chercher les infos de l'usager qui est connecté. 
       id: 0,
       url_pic: "",

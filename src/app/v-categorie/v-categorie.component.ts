@@ -6,5 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./v-categorie.component.scss']
 })
 export class VCategorieComponent {
-  @Input() categorie_id: number = 0;
-}
+  @Input() id: number = 0;
+  @Input() nomCategorie: string = "Aucune catégorie";
+};

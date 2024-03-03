@@ -1,9 +1,8 @@
 import { Component, Input } from '@angular/core';
 import{VIDEOS} from '../mock-videos';
 import { Video } from '../video';
-import {CATEGORIES} from '../mock-categories';
 import {AUTEURS} from '../mock-auteurs';
-
+import {CATEGORIES} from '../mock-categories';
 
 @Component({
   selector: 'app-liste-videos',
@@ -20,7 +19,7 @@ export class ListeVideosComponent {
     nom: "",
     description: "",
     code: "N/A",
-    categorie_id: 0,
+    categorie: CATEGORIES[0],
     auteur: AUTEURS[6],
     date: new Date,
     duree: 0,

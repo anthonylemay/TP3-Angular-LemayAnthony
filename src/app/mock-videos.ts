@@ -1,6 +1,7 @@
 import { Video } from "./video";
 import { AUTEURS } from "./mock-auteurs";
 import { Reaction } from "./avis";
+import { CATEGORIES } from "./mock-categories";
 
 export const VIDEOS: Video[] = [
     {
@@ -9,7 +10,7 @@ export const VIDEOS: Video[] = [
         nom: "vidéo 1",
         description: "description de film 1",
         code: "ABC001",
-        categorie_id: 3,
+        categorie: CATEGORIES[2],
         auteur: AUTEURS[3],
         date: new Date("2003-02-11"),
         duree: 3760,
@@ -50,7 +51,7 @@ export const VIDEOS: Video[] = [
         nom: "vidéo 2",
         description: "description de film 2",
         code: "ABC002",
-        categorie_id: 1,
+        categorie: CATEGORIES[1],
         auteur: AUTEURS[2],
         date: new Date("1996-01-10"),
         duree: 68,
@@ -75,7 +76,7 @@ export const VIDEOS: Video[] = [
         nom: "vidéo 3",
         description: "description de film 3",
         code: "ABC003",
-        categorie_id: 4,
+        categorie: CATEGORIES[4],
         auteur: AUTEURS[4],
         date: new Date("2020-07-12"),
         duree: 345,
@@ -100,7 +101,7 @@ export const VIDEOS: Video[] = [
         nom: "vidéo 4",
         description: "description de film 4",
         code: "ABC004",
-        categorie_id: 3,
+        categorie: CATEGORIES[3],
         auteur: AUTEURS[0],
         date: new Date("1988-11-11"),
         duree: 789,
@@ -125,7 +126,7 @@ export const VIDEOS: Video[] = [
         nom: "vidéo 5",
         description: "description de film 5",
         code: "ABC005",
-        categorie_id: 1,
+        categorie: CATEGORIES[1],
         auteur: AUTEURS[4],
         date: new Date("2008-01-15"),
         duree: 99,
@@ -150,7 +151,7 @@ export const VIDEOS: Video[] = [
         nom: "vidéo 6",
         description: "description de film 6",
         code: "ABC006",
-        categorie_id: 3,
+        categorie: CATEGORIES[3],
         auteur: AUTEURS[3],
         date: new Date("2015-04-04"),
         duree: 180,
