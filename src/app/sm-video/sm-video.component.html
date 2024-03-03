@@ -1,4 +1,4 @@
-<a [routerLink]="['/', video.id]" style="text-decoration: none; color: inherit;">
+<a [routerLink]="['/', video.id]">
     <mat-card [ngClass]="getFilmScore(video.score)">
         <app-v-img [url_img]="video.url_img" [closedcaption]="video.closedcaption" [subtitle]="video.subtitle"></app-v-img>
         <div class="flex--header">

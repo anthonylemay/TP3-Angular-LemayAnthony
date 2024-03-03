@@ -6,11 +6,12 @@
     width:100%;
     height:100%;
   }
-  
+
   .sidenav a {
     text-decoration: none;
     font-size: 1rem;
     color: #c2c2c2;
+    padding: 1rem 0;
   }
   
   .sidenav a:hover {
@@ -20,7 +21,7 @@
   .flex--col{
     display:flex;
     flex-direction: column;
-    align-items:center;
+    align-items:left;
     width:100%;
     height: 100vh;
   }

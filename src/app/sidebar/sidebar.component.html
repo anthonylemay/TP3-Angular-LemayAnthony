@@ -1,7 +1,18 @@
 <div class="sidenav">
     <div>
         <div class="flex--col">
-    <a href="#"><span><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>Accueil</span></a>
+            <a [routerLink]="['/']">
+                <span><mat-icon aria-hidden="false" aria-label="Home icon">home</mat-icon>Accueil</span>
+            </a>
+            <a [routerLink]="['/categories']">
+                <span><mat-icon aria-hidden="false" aria-label="List icon">list</mat-icon>Liste Videos</span>
+            </a>
+            <a [routerLink]="['/a-propos']">
+                <span><mat-icon aria-hidden="false" aria-label="Info icon">info</mat-icon>A propos</span>
+            </a>
+            <a [routerLink]="['/gestion-videos']">
+                <span><mat-icon aria-hidden="false" aria-label="Manage icon">settings</mat-icon>Gestion Videos</span>
+            </a>
     <a href="#"><span><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="favorite"></mat-icon>Favoris</span></a>
     <a href="#"><span><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="history"></mat-icon>Historique</span></a>
     </div>

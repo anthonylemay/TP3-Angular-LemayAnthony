@@ -21,16 +21,7 @@ export class VideoService {
   getCategories(): Observable<Categorie[]> {
     return this.http.get<Categorie[]>(`${this.API_URL}categories/`);
   }
-  fetchCategories() {
-    fetch(`${this.API_URL}categories`)
-      .then(response => response.json())
-      .then(data => console.log(data))
-      .catch(error => console.error('Fetch error:', error));
-  }
-  
-  
-  
-  
+
 
   
 }

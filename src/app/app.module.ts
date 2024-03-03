@@ -79,7 +79,7 @@ import { FicheVideoComponent } from './fiche-video/fiche-video.component';
     ViewCountPipe,
     AProposComponent,
     GestionVideosComponent,
-    FicheVideoComponent
+    FicheVideoComponent,
   ],
   imports: [
     BrowserModule,
