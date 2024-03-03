@@ -11,6 +11,17 @@ import { FormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -93,7 +104,22 @@ import { FicheVideoComponent } from './fiche-video/fiche-video.component';
     MatChipsModule,
     MatTooltipModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule, 
+
+    MatToolbarModule, 
+    MatListModule, 
+    MatDividerModule, 
+    MatSidenavModule, 
+    MatTableModule,
+    MatPaginatorModule, 
+    MatSortModule,
+    MatButtonModule,
+    MatSnackBarModule,
+    HttpClientModule, 
+    MatDialogModule
   ],
   providers: [VideoService],
   bootstrap: [AppComponent]

@@ -1,0 +1,21 @@
+table {
+    width: 100%;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.td-nom {
+    min-width: 300px;
+}
+
+.td-actions {
+    width: 100px;
+}
