@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import {Video} from '../video'
 import { CATEGORIES } from '../mock-categories';
 import { AUTEURS } from '../mock-auteurs';
-import { ActivatedRoute } from '@angular/router'; // pour get par ID, cours 4.
+
 
 @Component({
   selector: 'app-video-xl',
@@ -11,6 +11,11 @@ import { ActivatedRoute } from '@angular/router'; // pour get par ID, cours 4.
 })
 
 export class VideoXlComponent {
+
+
+
+
+
   @Input() video: Video = {
     id: 0,
     url_img: "",

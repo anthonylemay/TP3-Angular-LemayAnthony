@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -44,6 +45,7 @@ import { ViewCountPipe } from './view-count.pipe';
 import { AProposComponent } from './a-propos/a-propos.component';
 import { GestionVideosComponent } from './gestion-videos/gestion-videos.component';
 import { VideoService } from './video.service';
+import { FicheVideoComponent } from './fiche-video/fiche-video.component';
 
 
 
@@ -78,7 +80,8 @@ import { VideoService } from './video.service';
     DureeVidPipe,
     ViewCountPipe,
     AProposComponent,
-    GestionVideosComponent
+    GestionVideosComponent,
+    FicheVideoComponent
   ],
   imports: [
     BrowserModule,
@@ -91,7 +94,8 @@ import { VideoService } from './video.service';
     FormsModule,
     MatChipsModule,
     MatTooltipModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [VideoService],
   bootstrap: [AppComponent]

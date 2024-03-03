@@ -17,33 +17,13 @@ export class ListeVideosComponent {
   constructor (private videoService : VideoService) {}
 
   ngOnInit(): void {
-    this.videoService.getVideos()
-    .subscribe(resultat => this.videos = resultat);
+    this.getVideos();
   }
 
+  getVideos(): void{
+    this.videoService.getVideos()
+    .subscribe(resultat => this.videos = resultat)
+  }
 
-  @Input() video: Video = {
-    id: 0,
-    url_img: "",
-    nom: "",
-    description: "",
-    code: "N/A",
-    categorie: CATEGORIES[0],
-    auteur: AUTEURS[6],
-    date: new Date,
-    duree: 0,
-    vues: 0,
-    score: 0,
-    closedcaption: false,
-    subtitle: false,
-    avis:[{
-      id: 0,
-      auteur: AUTEURS[6],
-      note: 0,
-      reaction: null,
-      date: null,
-      commentaires: ""
-    }]
-  };
 
 }

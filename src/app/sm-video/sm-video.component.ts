@@ -2,12 +2,15 @@ import { Component, Input } from '@angular/core';
 import {Video} from '../video'
 import { CATEGORIES } from '../mock-categories';
 import { AUTEURS } from '../mock-auteurs';
+
+
 @Component({
   selector: 'app-sm-video',
   templateUrl: './sm-video.component.html',
   styleUrls: ['./sm-video.component.scss']
 })
 export class SmVideoComponent {
+
     @Input() video: Video = {
       id: 0,
       url_img: "",

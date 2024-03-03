@@ -1,13 +1,14 @@
-
-        <mat-card [ngClass]="getFilmScore(video.score)">
-                <app-v-img [url_img]="video.url_img" [closedcaption]="video.closedcaption" [subtitle]="video.subtitle"></app-v-img>
-                <div class="flex--header">
-                <app-v-nom [nom]="video.nom"></app-v-nom>
-                <app-v-vues [vues]="video.vues"></app-v-vues>
-                <app-v-duree [duree]="video.duree"></app-v-duree>
-                </div>
-            <div class="card--user">
-                <app-v-auteur [pseudo]="video.auteur.pseudo" [verifie]="video.auteur.verifie"></app-v-auteur>
-                <app-v-date [date]="video.date"></app-v-date>
-            </div>
-        </mat-card>
+<a [routerLink]="['/', video.id]" style="text-decoration: none; color: inherit;">
+    <mat-card [ngClass]="getFilmScore(video.score)">
+        <app-v-img [url_img]="video.url_img" [closedcaption]="video.closedcaption" [subtitle]="video.subtitle"></app-v-img>
+        <div class="flex--header">
+            <app-v-nom [nom]="video.nom"></app-v-nom>
+            <app-v-vues [vues]="video.vues"></app-v-vues>
+            <app-v-duree [duree]="video.duree"></app-v-duree>
+        </div>
+        <div class="card--user">
+            <app-v-auteur [pseudo]="video.auteur.pseudo" [verifie]="video.auteur.verifie"></app-v-auteur>
+            <app-v-date [date]="video.date"></app-v-date>
+        </div>
+    </mat-card>
+</a>
