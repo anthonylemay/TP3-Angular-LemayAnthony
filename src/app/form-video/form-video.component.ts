@@ -109,9 +109,9 @@ export class FormVideoComponent implements OnInit {
     url_img: "",
     nom: "Aucun Nom",
     description: "Aucune Description",
-    code: "N/A",
+    code: "ABC000",
     categorie: {
-      id:1,
+      id:0,
       nom: "",
     },
     auteur: {

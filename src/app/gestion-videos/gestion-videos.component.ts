@@ -17,7 +17,7 @@ import { FormVideoComponent } from '../form-video/form-video.component';
 export class GestionVideosComponent implements OnInit  {
 
   dataSourceVideos: MatTableDataSource<Video> = new MatTableDataSource();
-  columnsToDisplay = ['nom', 'actions'];
+  columnsToDisplay = ['nom', 'code', 'date', 'duree', 'actions'];
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
