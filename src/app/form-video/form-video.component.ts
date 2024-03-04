@@ -106,15 +106,16 @@ export class FormVideoComponent implements OnInit {
   }
 
   video: Video = {
-    url_img: "",
-    nom: "Aucun Nom",
-    description: "Aucune Description",
+    url_img: "https://picsum.photos/200/300?random=1",
+    nom: "Vidéo Abc",
+    description: "Description courte",
     code: "ABC000",
     categorie: {
       id:0,
       nom: "",
     },
     auteur: {
+      id: 0,
       nom: "",
       pseudo: "",
       verifie: false,
@@ -127,9 +128,6 @@ export class FormVideoComponent implements OnInit {
         courriel: "",
         twitch: ""
       }
-
-
-
     },
     date: new Date(),
     duree: 0,

@@ -3,37 +3,84 @@
 
     <mat-form-field class="video-full-width" appearance="fill">
         <mat-label>Thumbnail Vidéo (img)</mat-label>
-        <input matInput name="urlVideo" [(ngModel)]="video.url_img" required>
+        <input matInput name="url_img" [(ngModel)]="video.url_img" #url_img="ngModel" required>
         <mat-icon matSuffix>close</mat-icon>
       </mat-form-field>
+      <mat-error *ngIf="url_img.invalid && (url_img.dirty || url_img.touched) && url_img.hasError('required')">
+        L'url de thumbnail est obligatoire.
+    </mat-error>
+    <mat-error *ngIf="url_img.invalid && (url_img.dirty || url_img.touched) && url_img.hasError('minlength')">
+        Le nom doit contenir au moins 9 caractères.
+    </mat-error>
+    <mat-error *ngIf="url_img.invalid && (url_img.dirty || url_img.touched) && url_img.hasError('maxlength')">
+        Le nom doit contenir au maximum 255 caractères.
+    </mat-error>
+
+
 
     <mat-form-field class="video-full-width" appearance="fill">
       <mat-label>Nom Vidéo</mat-label>
-      <input matInput name="nomVideo" [(ngModel)]="video.nom" required>
+      <input matInput name="nom" [(ngModel)]="video.nom" #nom="ngModel" required>
       <mat-icon matSuffix>close</mat-icon>
     </mat-form-field>
+    <mat-error *ngIf="nom.invalid && (nom.dirty || nom.touched) && nom.hasError('required')">
+      Le nom est obligatoire.
+  </mat-error>
+  <mat-error *ngIf="nom.invalid && (nom.dirty || nom.touched) && nom.hasError('minlength')">
+      Le nom doit contenir au moins 2 caractères.
+  </mat-error>
+  <mat-error *ngIf="nom.invalid && (nom.dirty || nom.touched) && nom.hasError('maxlength')">
+      Le nom doit contenir au maximum 50 caractères.
+  </mat-error>
 
     <mat-form-field class="video-full-width" appearance="fill">
         <mat-label>Description</mat-label>
-        <textarea matInput name="descVideo" [(ngModel)]="video.description"></textarea>
+        <textarea matInput name="description" [(ngModel)]="video.description" #description="ngModel"></textarea>
         <mat-icon matSuffix>close</mat-icon>
       </mat-form-field>
+    <mat-error *ngIf="description.invalid && (description.dirty || description.touched) && description.hasError('minlength')">
+        La description doit contenir au moins 8 caractères.
+    </mat-error>
+    <mat-error *ngIf="description.invalid && (description.dirty || description.touched) && description.hasError('maxlength')">
+        La description doit contenir au maximum 800 caractères.
+    </mat-error>
 
       <mat-form-field class="video-full-width" appearance="fill">
         <mat-label>Code</mat-label>
-        <input matInput name="codeVideo" [(ngModel)]="video.code">
+        <input matInput name="code" [(ngModel)]="video.code" #code="ngModel">
         <mat-icon matSuffix>close</mat-icon>
       </mat-form-field>
-
+      <mat-error *ngIf="code.invalid && (code.dirty || code.touched) && code.hasError('minlength')">
+        Le code doit contenir au moins 6 caractères.
+    </mat-error>
+    <mat-error *ngIf="code.invalid && (code.dirty || code.touched) && code.hasError('maxlength')">
+        Le code doit contenir au maximum 12 caractères.
+    </mat-error>
       <!-- Auteur ID Field -->
       <mat-form-field class="video-full-width" appearance="fill">
         <mat-label>Auteur ID</mat-label>
         <input matInput 
                type="number" 
-               name="autorIdVideo" 
-               [(ngModel)]="video.auteur.id" 
+               name="auteur_id" 
+               [(ngModel)]="video.auteur.id"  #auteur_id="ngModel"
                required>
       </mat-form-field>
+      <mat-error *ngIf="auteur_id.invalid && (auteur_id.dirty || auteur_id.touched) && auteur_id.hasError('required')">
+        L'auteur est obligatoire.
+    </mat-error>
+
+
+      <mat-form-field class="video-full-width" appearance="fill">
+        <mat-label>Categorie ID</mat-label>
+        <input matInput 
+               type="number" 
+               name="categorie_id" 
+               [(ngModel)]="video.categorie.id" #categorie_id="ngModel" 
+               required>
+      </mat-form-field>
+      <mat-error *ngIf="categorie_id.invalid && (categorie_id.dirty || categorie_id.touched) && categorie_id.hasError('required')">
+        La catégorie est obligatoire.
+    </mat-error>
       
 
           <!-- Author select Field - avec l'API
@@ -45,52 +92,71 @@
     </mat-form-field> -->
 
 
-      <mat-form-field class="video-full-width" appearance="fill">
+  <!--  <mat-form-field class="video-full-width" appearance="fill">
         <mat-label>Catégorie</mat-label>
         <mat-select name="categorieVideo" [(ngModel)]="video.categorie.id" required>
           <mat-option *ngFor="let categorie of categories" [value]="categorie.id">{{ categorie.nom }}</mat-option>
         </mat-select>
-      </mat-form-field>
+      </mat-form-field> --> 
       
 <!-- possiblement l'auteur si j'ai le temps d'ajouter une fonction GET dans l'API pour la table Auteurs-->
 
       <mat-form-field class="video-full-width" appearance="fill">
         <mat-label>Date de publication</mat-label>
-        <input matInput [matDatepicker]="picker" name="dateVideo" [(ngModel)]="video.date" required>
+        <input matInput [matDatepicker]="picker" name="date" [(ngModel)]="video.date" #date="ngModel" required>
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
+      <mat-error *ngIf="date.invalid && (date.dirty || date.touched) && date.hasError('required')">
+        La date de publication est obligatoire.
+    </mat-error>
 
       <mat-form-field class="video-full-width" appearance="fill">
         <mat-label>Durée (secondes)</mat-label>
-        <input matInput name="dureeVideo" [(ngModel)]="video.duree" required>
+        <input matInput name="duree" [(ngModel)]="video.duree" #duree="ngModel" required>
         <mat-icon matSuffix>close</mat-icon>
       </mat-form-field>
+      <mat-error *ngIf="duree.invalid && (duree.dirty || duree.touched) && duree.hasError('required')">
+        La durée de la vidéo est obligatoire.
+    </mat-error>
 
       <mat-form-field class="video-full-width" appearance="fill">
         <mat-label>Nombre de vues</mat-label>
-        <input matInput name="vuesVideo" [(ngModel)]="video.vues">
+        <input matInput name="vues" [(ngModel)]="video.vues" #vues="ngModel">
         <mat-icon matSuffix>close</mat-icon>
       </mat-form-field>
+      <mat-error *ngIf="vues.invalid && (vues.dirty || vues.touched) && vues.hasError('minlength')">
+        Le nombre de vues doit contenir au moins 1 chiffre.
+    </mat-error>
+    <mat-error *ngIf="vues.invalid && (vues.dirty || vues.touched) && vues.hasError('maxlength')">
+        Le nombre de vues doit contenir au maximum 30 chiffres.
+    </mat-error>
 
       <mat-form-field class="video-full-width" appearance="fill">
         <mat-label>Score</mat-label>
-        <input matInput name="scoreVideo" [(ngModel)]="video.score">
+        <input matInput name="score" [(ngModel)]="video.score" #score="ngModel">
         <mat-icon matSuffix>close</mat-icon>
       </mat-form-field>
 
-      <mat-slide-toggle name="closedCaptionVideo" [(ngModel)]="video.closedcaption" color="primary">Closed Caption</mat-slide-toggle>
-      <mat-slide-toggle name="subtitlesVideo" [(ngModel)]="video.subtitle" color="primary">Subtitles</mat-slide-toggle>
+      <mat-slide-toggle name="closedcaption" [(ngModel)]="video.closedcaption" color="primary">Closed Caption</mat-slide-toggle>
+      <mat-slide-toggle name="subtitle" [(ngModel)]="video.subtitle" color="primary">Subtitles</mat-slide-toggle>
       
 
       
       <div>
-        <div>
-            <button mat-button type="submit" [disabled]="!formVideoAjout.valid">
-                {{ video.id ? 'Modifier' : 'Créer' }}
+          <button *ngIf="video.id; else boutonAjout" mat-button mat-aria-label="Modifier" 
+          [disabled]="!formVideoAjout.form.valid" (click)="updateVideo(formVideoAjout)">Modifier</button>
+
+          <ng-template #boutonAjout>
+            <button mat-button mat-aria-label="Ajouter" 
+                [disabled]="!formVideoAjout.form.valid" (click)="addVideo(formVideoAjout)">
+                Créer
             </button>
-            <button mat-button mat-aria-label="Annuler" (click)="annuler()">Annuler</button>
-        </div>
+          </ng-template>
+
+
+          <button mat-button mat-aria-label="Annuler" (click)="annuler()">Annuler</button>
+
     </div>
 
 
