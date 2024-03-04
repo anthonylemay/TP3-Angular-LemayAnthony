@@ -33,18 +33,18 @@ export class FormVideoComponent implements OnInit {
   }
 
 
-  convertBooleansToNumbers(video: Video): any {
+  /*convertBooleansToNumbers(video: Video): any {
     const convertedVideo = {
       ...video,
       closedcaption: video.closedcaption ? 1 : 0,
       subtitle: video.subtitle ? 1 : 0,
     };
-    console.log('Video before conversion:', video);
-    console.log('Video after conversion to numbers:', convertedVideo);
+    console.log('Video avant conversion:', video);
+    console.log('Video après conversion à nombres', convertedVideo);
     return convertedVideo;
-  }
+  } */
 
-  addVideo(formVideoAjout: NgForm) {
+  /* addVideo(formVideoAjout: NgForm) {
     const videoToSend = this.convertBooleansToNumbers(this.video);
     console.log('Sending video to API:', videoToSend);
     this.videoService.addVideo(videoToSend).subscribe(_ => {
@@ -54,22 +54,45 @@ export class FormVideoComponent implements OnInit {
     }, error => {
       console.error('Error adding video:', error);
     });
-  }
+  } */
   
   
-  updateVideo(formVideoAjout: NgForm) {
+  /* updateVideo(formVideoAjout: NgForm) {
     const videoToUpdate = this.convertBooleansToNumbers(this.video);
-    console.log('Updating video with data:', videoToUpdate);
-    this.videoService.updateVideo(videoToUpdate).subscribe(_ => {
-      console.log('Video updated successfully');
+    console.log('mise à jour du contenu à venir:', videoToUpdate);
+    this.videoService.updateVideo(videoToUpdate).subscribe(
+      _ => {
+      console.log('Video mise à jour avec succès');
       formVideoAjout.resetForm();
       this.dialogRef.close("Vidéo modifiée!");
     }, error => {
-      console.error('Error updating video:', error);
+      console.error('Erreur de modification:', error);
     });
-  }
-  
+  } */
 
+
+  addVideo(formVideoAjout: NgForm) {
+    //if (formVideoAjout.valid) {
+      this.videoService.addVideo(this.video).subscribe(
+        _ => {
+          console.log(this.video);
+          formVideoAjout.resetForm();
+          this.dialogRef.close("vidéo ajouté!");
+        }
+      );
+    //}
+  }
+
+  updateVideo(formVideoAjout: NgForm) {
+// ajouter la validation
+      this.videoService.updateVideo(this.video).subscribe(
+        _ => {
+          formVideoAjout.resetForm();
+          this.dialogRef.close("Vidéo modifié!");
+        }
+      );
+    }
+  
   onSubmit(form: NgForm) {
     if (this.video.id) {
       this.updateVideo(form);
