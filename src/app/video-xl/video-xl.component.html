@@ -1,4 +1,5 @@
 <section class="listXlVideos">
+  <h1 class="xlTitle">{{video.nom}}</h1>
   <div class="cardDetails">
           <app-v-img-xl [url_img]="video.url_img" [closedcaption]="video.closedcaption" [subtitle]="video.subtitle"></app-v-img-xl>
           <div>
@@ -25,7 +26,7 @@
               </div>
             </ng-container>
          </div>
-
+         <app-ajout-avis></app-ajout-avis>
 
   </div>
   <div class="priceInfo">

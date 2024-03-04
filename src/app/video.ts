@@ -3,7 +3,7 @@ import {Auteur} from "./auteur"
 import {Categorie} from "./categorie"
 
 export interface Video {
-    id: number;
+    id?: number;
     url_img: string;
     nom: string;
     description: string;
@@ -16,5 +16,5 @@ export interface Video {
     score: number;
     closedcaption: boolean;
     subtitle: boolean;
-    avis: Avis[];
+    avis?: Avis[];
 }

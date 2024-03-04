@@ -31,7 +31,7 @@ export class ListeVideosComponent {
     this.videoService.getCategories().subscribe(resultat => this.categories = resultat);
   }
   
-  filterVideosByCategory(categoryId: number | null): void {
+  filterVideosByCategory(categoryId: number | null ): void {
     if (categoryId) {
       this.filteredVideos = this.videos.filter(v => v.categorie.id === categoryId);
     } else {

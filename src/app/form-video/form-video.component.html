@@ -1,44 +1,102 @@
-<form class="video-form">
+<form #formVideoAjout="ngForm" (ngSubmit)="onSubmit(formVideoAjout)" class="video-form">
+
+
+    <mat-form-field class="video-full-width" appearance="fill">
+        <mat-label>Thumbnail Vidéo (img)</mat-label>
+        <input matInput name="urlVideo" [(ngModel)]="video.url_img" required>
+        <mat-icon matSuffix>close</mat-icon>
+      </mat-form-field>
+
     <mat-form-field class="video-full-width" appearance="fill">
       <mat-label>Nom Vidéo</mat-label>
-      <input matInput name="nomVideo" [(ngModel)]="formVideo.nom">
+      <input matInput name="nomVideo" [(ngModel)]="video.nom" required>
       <mat-icon matSuffix>close</mat-icon>
     </mat-form-field>
 
     <mat-form-field class="video-full-width" appearance="fill">
         <mat-label>Description</mat-label>
-        <input matInput name="descVideo" [(ngModel)]="formVideo.description">
-        <mat-icon matSuffix>close</mat-icon>
-      </mat-form-field>
-
-    <mat-form-field class="video-full-width" appearance="fill">
-        <mat-label>Catégories</mat-label>
-        <input matInput name="categorieVideo" [(ngModel)]="formVideo.categorie">
+        <textarea matInput name="descVideo" [(ngModel)]="video.description"></textarea>
         <mat-icon matSuffix>close</mat-icon>
       </mat-form-field>
 
       <mat-form-field class="video-full-width" appearance="fill">
         <mat-label>Code</mat-label>
-        <input matInput name="codeVideo" [(ngModel)]="formVideo.code">
+        <input matInput name="codeVideo" [(ngModel)]="video.code">
         <mat-icon matSuffix>close</mat-icon>
       </mat-form-field>
 
+      <!-- Author ID Field -->
+      <mat-form-field class="video-full-width" appearance="fill">
+        <mat-label>Auteur ID</mat-label>
+        <input matInput 
+               type="number" 
+               name="autorIdVideo" 
+               [(ngModel)]="video.auteur.id" 
+               required>
+        <button mat-icon-button matSuffix 
+                *ngIf="video.auteur.id" 
+                (click)="video.auteur.id=0">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+      
+
+          <!-- Author select Field - avec l'API
+      <mat-form-field class="video-full-width" appearance="fill">
+        <mat-label>Auteur ID</mat-label>
+        <mat-select name="auteurVideo" [(ngModel)]="video.auteur.id" required>
+            <mat-option *ngFor="let auteur of auteurs" [value]="video.auteur.id">{{ video.auteur.nom }}</mat-option>
+        </mat-select>
+    </mat-form-field> -->
+
+
+      <mat-form-field class="video-full-width" appearance="fill">
+        <mat-label>Catégorie</mat-label>
+        <mat-select name="categorieVideo" [(ngModel)]="video.categorie.id" required>
+          <mat-option *ngFor="let categorie of categories" [value]="categorie.id">{{ categorie.nom }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+<!-- possiblement l'auteur si j'ai le temps d'ajouter une fonction GET dans l'API pour la table Auteurs-->
+
       <mat-form-field class="video-full-width" appearance="fill">
         <mat-label>Date de publication</mat-label>
-        <input matInput name="dateVideo" [(ngModel)]="formVideo.date">
-        <mat-icon matSuffix>close</mat-icon>
+        <input matInput [matDatepicker]="picker" name="dateVideo" [(ngModel)]="video.date" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
 
       <mat-form-field class="video-full-width" appearance="fill">
         <mat-label>Durée (secondes)</mat-label>
-        <input matInput name="dureeVideo" [(ngModel)]="formVideo.duree">
+        <input matInput name="dureeVideo" [(ngModel)]="video.duree" required>
         <mat-icon matSuffix>close</mat-icon>
       </mat-form-field>
 
       <mat-form-field class="video-full-width" appearance="fill">
-        <mat-label>Sous-titres</mat-label>
-        <input matInput name="closedcaptionVideo" [(ngModel)]="formVideo.closedcaption">
+        <mat-label>Nombre de vues</mat-label>
+        <input matInput name="vuesVideo" [(ngModel)]="video.vues">
         <mat-icon matSuffix>close</mat-icon>
       </mat-form-field>
-        <button (click) = "submit()">Button</button>
+
+      <mat-form-field class="video-full-width" appearance="fill">
+        <mat-label>Score</mat-label>
+        <input matInput name="scoreVideo" [(ngModel)]="video.score">
+        <mat-icon matSuffix>close</mat-icon>
+      </mat-form-field>
+
+      <mat-slide-toggle name="closedCaptionVideo" [(ngModel)]="video.closedcaption" color="primary">Closed Caption</mat-slide-toggle>
+      <mat-slide-toggle name="subtitlesVideo" [(ngModel)]="video.subtitle" color="primary">Subtitles</mat-slide-toggle>
+      
+
+      
+      <div>
+        <div>
+            <button mat-button type="submit" [disabled]="!formVideoAjout.valid">
+                {{ video.id ? 'Modifier' : 'Créer' }}
+            </button>
+            <button mat-button mat-aria-label="Annuler" (click)="annuler()">Annuler</button>
+        </div>
+    </div>
+
+
 </form>

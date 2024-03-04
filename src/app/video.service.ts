@@ -35,6 +35,7 @@ export class VideoService {
     return this.http.put<void>(`${this.API_URL}/${video.id}`, video, httpOptions);
   }
 
+
   deleteVideo(id: string): Observable<void> {
     console.log(`${this.API_URL}\\${id}`);
     return this.http.delete<void>(`${this.API_URL}/${id}`, httpOptions);

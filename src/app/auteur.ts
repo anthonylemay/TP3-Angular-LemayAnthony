@@ -1,7 +1,7 @@
 import { Coordonnee } from "./coordonnee";
 
 export interface Auteur {
-    id:number;
+    id?:number;
     nom:string;
     pseudo: string;
     verifie: boolean;

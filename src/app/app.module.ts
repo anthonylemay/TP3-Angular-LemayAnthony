@@ -21,7 +21,11 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -56,7 +60,6 @@ import { AProposComponent } from './a-propos/a-propos.component';
 import { GestionVideosComponent } from './gestion-videos/gestion-videos.component';
 import { VideoService } from './video.service';
 import { FicheVideoComponent } from './fiche-video/fiche-video.component';
-
 
 
 @NgModule({
@@ -108,6 +111,7 @@ import { FicheVideoComponent } from './fiche-video/fiche-video.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule, 
+    ReactiveFormsModule, 
 
     MatToolbarModule, 
     MatListModule, 
@@ -119,7 +123,12 @@ import { FicheVideoComponent } from './fiche-video/fiche-video.component';
     MatButtonModule,
     MatSnackBarModule,
     HttpClientModule, 
-    MatDialogModule
+    MatDialogModule,
+    
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSlideToggleModule,
   ],
   providers: [VideoService],
   bootstrap: [AppComponent]

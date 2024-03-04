@@ -50,7 +50,7 @@ export class GestionVideosComponent implements OnInit  {
       });
     
     dialogRef.afterClosed().subscribe(result => {
-      console.log('Le dialog du formulaire de héro a été fermé');
+      console.log('Le dialog du formulaire de vidéo a été fermé');
       this._snackBar.open(result, undefined, {
         duration: 2000
       });
@@ -62,7 +62,7 @@ export class GestionVideosComponent implements OnInit  {
     this.videoService.deleteVideo(_id).subscribe(
       _ => {
         this.getVideos();
-        this._snackBar.open("Héro supprimé!", undefined, {
+        this._snackBar.open("Vidéo supprimée avec succès", undefined, {
           duration: 2000
         });
       }

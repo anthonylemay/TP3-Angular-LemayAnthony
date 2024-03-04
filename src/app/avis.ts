@@ -7,7 +7,7 @@ export enum Reaction {
 
 
 export interface Avis {
-    id: number;
+    id?: number;
     auteur: Auteur;
     note: number;
     commentaires: string;
