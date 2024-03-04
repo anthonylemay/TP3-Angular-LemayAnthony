@@ -88,7 +88,7 @@ export class FormVideoComponent implements OnInit {
     description: "Aucune Description",
     code: "N/A",
     categorie: {
-      id:0,
+      id:1,
       nom: "",
     },
     auteur: {

@@ -32,13 +32,13 @@ export class VideoService {
   }
 
   updateVideo(video: Video): Observable<void> {
-    return this.http.put<void>(`${this.API_URL}${video.id}`, video, httpOptions);
+    return this.http.put<void>(`${this.API_URL}`+`?id=`+`${video.id}`, video, httpOptions);
   }
 
 
   deleteVideo(id: string): Observable<void> {
-    console.log(`${this.API_URL}\\${id}`);
-    return this.http.delete<void>(`${this.API_URL}${id}`, httpOptions);
+    console.log(`${this.API_URL}${id}`);
+    return this.http.delete<void>(`${this.API_URL}`+`?id=`+`${id}`, httpOptions);
   }
 
   

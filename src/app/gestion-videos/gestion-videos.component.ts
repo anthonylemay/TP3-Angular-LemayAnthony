@@ -58,8 +58,8 @@ export class GestionVideosComponent implements OnInit  {
     });
   }
 
-  deleteVideo(_id: string) { 
-    this.videoService.deleteVideo(_id).subscribe(
+  deleteVideo(id: string) { 
+    this.videoService.deleteVideo(id).subscribe(
       _ => {
         this.getVideos();
         this._snackBar.open("Vidéo supprimée avec succès", undefined, {
