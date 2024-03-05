@@ -3,6 +3,8 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { VideoService } from '../video.service';
 import { Video } from '../video';
 import { NgForm } from '@angular/forms';
+import { Categorie } from '../video';
+import { Auteur } from '../video';
 
 @Component({
   selector: 'app-form-video',
@@ -11,6 +13,9 @@ import { NgForm } from '@angular/forms';
 })
 export class FormVideoComponent implements OnInit {
   video!: Video;
+  categories: Categorie[] = [];
+  auteurs: Auteur[] = [];
+
 
   constructor(
     private videoService: VideoService,
@@ -19,6 +24,8 @@ export class FormVideoComponent implements OnInit {
 
   ngOnInit(): void {
     this.video = { ...this.getDefaultVideo(), ...(this.data || {}) };
+    this.fetchCategories();
+    this.fetchAuteurs();
   }
 
   getDefaultVideo(): Video {
@@ -76,6 +83,17 @@ export class FormVideoComponent implements OnInit {
     };
   }
 
+
+  fetchCategories(): void {
+    this.videoService.getCategories().subscribe(categories => {
+      this.categories = categories;
+    });
+  }
+  fetchAuteurs(): void {
+    this.videoService.getAuteurs().subscribe(auteurs => {
+      this.auteurs = auteurs;
+    });
+  }
 
 
 

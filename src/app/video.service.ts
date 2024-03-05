@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Video } from './video';
 import { Categorie } from './video';
+import { Auteur } from './video';
 
 
 const httpOptions = {
@@ -40,6 +41,10 @@ export class VideoService {
 
   getCategories(): Observable<Categorie[]> {
     return this.http.get<Categorie[]>(`${this.API_URL}categories/`);
+  }
+
+  getAuteurs(): Observable<Auteur[]> {
+    return this.http.get<Auteur[]>(`${this.API_URL}auteurs/`);
   }
   
 }
