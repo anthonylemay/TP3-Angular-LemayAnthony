@@ -48,6 +48,15 @@ export class GestionVideosComponent implements OnInit  {
     const dialogRef = this.dialog.open(FormVideoComponent, {
         data: video
       });
+  
+    const instance = dialogRef.componentInstance;
+    instance.formSubmit.subscribe((result) => {
+      console.log(result); // Process the result, refresh list, or show message
+      this.getVideos(); // Refresh the video list
+      this._snackBar.open(result.toString(), undefined, {
+        duration: 2000
+      });
+    });
     
     dialogRef.afterClosed().subscribe(result => {
       console.log('Le dialog du formulaire de vidéo a été fermé');

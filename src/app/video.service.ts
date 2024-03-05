@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Video } from './video';
 import { Categorie } from './video';
 import { Auteur } from './video';
+import { VideoSubmission } from './video-submission';
 
 
 const httpOptions = {
@@ -25,14 +26,17 @@ export class VideoService {
     return this.http.get<Video>(`${this.API_URL}`+`?id=`+`${id}`);
   }
 
-  addVideo(video:Video): Observable<void> {
+  addVideo(video:VideoSubmission): Observable<void> {
     return this.http.post<void>(this.API_URL, video, httpOptions);
   }
 
-  updateVideo(video: Video): Observable<void> {
+  /*updateVideo(video: VideoSubmission): Observable<void> {
     return this.http.put<void>(`${this.API_URL}`+`?id=`+`${video.id}`, video, httpOptions);
-  }
+  }*/
 
+    updateVideo(id: number,video: VideoSubmission): Observable<void> {
+    return this.http.put<void>(`${this.API_URL}`+`?id=`+`${id}`, video, httpOptions);
+  }
 
   deleteVideo(id: string): Observable<void> {
     console.log(`${this.API_URL}${id}`);
