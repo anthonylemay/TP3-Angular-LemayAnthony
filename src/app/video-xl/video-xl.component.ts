@@ -23,18 +23,18 @@ export class VideoXlComponent implements OnInit {
   getDefaultVideo(): Video {
     return {
       id: 0,
-      url_img: 'defaultImageURL',
-      nom: 'Default Name',
-      description: 'Default Description',
+      url_img: 'ImageURL',
+      nom: 'Nom Vidéo',
+      description: 'Description Vidéo',
       code: 'N/A',
-      categorie: { id: 0, nom: 'Default Category' },
+      categorie: { id: 0, nom: 'Categorie' },
       auteur: {
         id: 0,
-        nom: 'Default Author',
-        pseudo: 'DefaultPseudo',
+        nom: 'Auteur',
+        pseudo: 'Pseudo',
         verifie: false,
-        description: 'Default Description',
-        url_pic: 'defaultAvatarURL',
+        description: 'Description Auteur',
+        url_pic: 'AvatarURL',
         coordonnees: {
           id: 0,
           courriel: '',
@@ -53,11 +53,11 @@ export class VideoXlComponent implements OnInit {
       avis: [{
         auteur: {
           id: 0,
-          nom: 'Anonymous',
-          pseudo: 'Anonymous',
+          nom: 'Anonyme',
+          pseudo: 'Anonyme',
           verifie: false,
-          description: 'Default Description',
-          url_pic: 'defaultAvatarURL',
+          description: ' Description',
+          url_pic: 'AvatarURL',
           coordonnees: {
             id: 0,
             courriel: '',
@@ -68,7 +68,7 @@ export class VideoXlComponent implements OnInit {
           }
         },
         note: 0,
-        commentaires: 'No Comment',
+        commentaires: 'Commentaire',
         reaction: null,
         date: new Date()
       }]

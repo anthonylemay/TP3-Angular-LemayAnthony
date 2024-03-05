@@ -30,17 +30,27 @@ export class FormVideoComponent implements OnInit {
     this.fetchAuteurs();
   }
 
+
+  isValidCategory: boolean = true;
+  isValidAuthor: boolean = true;
+
+  isCategoryAndAuthorSelected(): boolean {
+    this.isValidCategory = this.video.categorie.id !== -1;
+    this.isValidAuthor = this.video.auteur.id !== -1;
+    return this.isValidCategory && this.isValidAuthor;
+  }
+
   getDefaultVideo(): Video {
     return {
       id: 0,
-      url_img: 'defaultImageURL',
+      url_img: 'https://picsum.photos/id/579/200/300',
       nom: 'Default Name',
       description: 'Default Description',
-      code: 'N/A',
-      categorie: { id: 0, nom: 'Default Category' },
+      code: '',
+      categorie: { id: -1, nom: 'Sélectionner' },
       auteur: {
-        id: 0,
-        nom: 'Default Author',
+        id: -1,
+        nom: 'Sélectionner',
         pseudo: 'DefaultPseudo',
         verifie: false,
         description: 'Default Description',
@@ -106,7 +116,7 @@ export class FormVideoComponent implements OnInit {
       code: video.code,
       categorie_id: video.categorie.id,
       auteur_id: video.auteur.id,
-      date: video.date instanceof Date ? video.date.toISOString().split('T')[0] : video.date, // format date as YYYY-MM-DD
+      date: video.date instanceof Date ? video.date.toISOString().split('T')[0] : video.date, // format de date YYYY-MM-DD
       duree: video.duree,
       vues: video.vues,
       score: video.score,
@@ -117,6 +127,10 @@ export class FormVideoComponent implements OnInit {
   
 
   addVideo(formVideoAjout: NgForm) {
+    if (!this.isCategoryAndAuthorSelected()) {
+      alert("Veuillez avoir choisi un auteur et une catégorie valide."); 
+      return;
+    }
     if (formVideoAjout.valid) {
       const videoForSubmission = this.prepareVideoForSubmission(this.video);
       this.videoService.addVideo(videoForSubmission).subscribe({
@@ -134,9 +148,13 @@ export class FormVideoComponent implements OnInit {
   }
   
   updateVideo(formVideoAjout: NgForm) {
+    if (!this.isCategoryAndAuthorSelected()) {
+      alert("Veuillez avoir choisi un auteur et une catégorie valide."); 
+      return;
+    }
     if (formVideoAjout.valid) {
       const videoForSubmission = this.prepareVideoForSubmission(this.video);
-      if (typeof videoForSubmission.id === 'number') { // Ensure id is defined and is a number
+      if (typeof videoForSubmission.id === 'number') { // S'assurer que le id est défini et est un nombre.
         this.videoService.updateVideo(videoForSubmission.id, videoForSubmission).subscribe({
           next: (response) => {
             console.log(response);
@@ -154,11 +172,37 @@ export class FormVideoComponent implements OnInit {
     }
   }
   
-  
-  
-  
   annuler() {
     this.dialogRef.close("Requête annulée");
   }
+
+  clearUrlImg() {
+    this.video.url_img = '';
+  }
+
+  clearNom() {
+    this.video.nom = '';
+  }
+
+  clearDescription() {
+    this.video.description = '';
+  }
+
+  clearCode() {
+    this.video.code = '';
+  }
+
+  clearDuree() {
+    this.video.duree = 0; 
+  }
+
+  clearVues() {
+    this.video.vues = 0; 
+  }
+
+  clearScore() {
+    this.video.score = 0; 
+  }
+
 
 }

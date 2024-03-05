@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Avis, Reaction } from '../avis'; // Ensure Reaction enum is exported and imported correctly
+import { Avis, Reaction } from '../avis';
 
 @Component({
   selector: 'app-ajout-avis',
@@ -17,32 +17,6 @@ export class AjoutAvisComponent {
     date: new Date()
   };
 
-  // Initial state with reaction set to null
- /* ajoutavis: Avis = {
-    id: 0, // Assuming a temporary placeholder ID
-    auteur: {
-      id: 0, // Placeholder, assuming you'll replace with the actual auteur's data
-      url_pic: "",
-      nom: "",
-      pseudo: "",
-      verifie: false,
-      coordonnees: {
-        courriel: "",
-        facebook: "",
-        instagram: "",
-        twitch: "",
-        site_web: ""
-      },
-      description: "",
-    },
-    note: 0,
-    commentaires: "",
-    reaction: null,
-    date: null // va être push à la datetime actuelle.
-  };*/
-
-
-
   like() {
     this.avis.reaction = Reaction.Like;
   }
@@ -56,9 +30,9 @@ export class AjoutAvisComponent {
     const dataToSend = {
       ...this.avis,
       date: this.avis.date.toISOString().replace('T', ' ').substring(0, 19) // Conversion en str pour avoir les secondes.
-    }; // à valider si ca fonctionne sur le backend pour le time avec date. 
+    }; 
 
     console.log(this.avis);
-    // ajout des focntionnalités de push sur le back
+    // ajout des focntionnalités de push sur le back dans un deuxième temps.
   }
 }

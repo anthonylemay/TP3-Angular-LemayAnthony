@@ -1,4 +1,4 @@
-import { Categorie } from "./categorie";
+/*import { Categorie } from "./categorie";
 
 export const CATEGORIES = [
     {id:1, nom: "Horreur"},
@@ -7,3 +7,4 @@ export const CATEGORIES = [
     {id:4, nom: "Animation"},
     {id:5, nom: "Documentaire"},
 ];
+*/

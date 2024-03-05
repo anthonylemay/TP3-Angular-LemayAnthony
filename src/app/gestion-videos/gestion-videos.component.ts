@@ -51,8 +51,8 @@ export class GestionVideosComponent implements OnInit  {
   
     const instance = dialogRef.componentInstance;
     instance.formSubmit.subscribe((result) => {
-      console.log(result); // Process the result, refresh list, or show message
-      this.getVideos(); // Refresh the video list
+      console.log(result); 
+      this.getVideos(); 
       this._snackBar.open(result.toString(), undefined, {
         duration: 2000
       });

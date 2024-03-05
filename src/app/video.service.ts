@@ -30,10 +30,6 @@ export class VideoService {
     return this.http.post<void>(this.API_URL, video, httpOptions);
   }
 
-  /*updateVideo(video: VideoSubmission): Observable<void> {
-    return this.http.put<void>(`${this.API_URL}`+`?id=`+`${video.id}`, video, httpOptions);
-  }*/
-
     updateVideo(id: number,video: VideoSubmission): Observable<void> {
     return this.http.put<void>(`${this.API_URL}`+`?id=`+`${id}`, video, httpOptions);
   }

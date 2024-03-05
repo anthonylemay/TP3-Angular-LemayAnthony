@@ -19,7 +19,7 @@ export class FicheVideoComponent implements OnInit {
   }
 
   getVideo(): void {
-    const id = this.route.snapshot.paramMap.get('id'); // valider la possibilité d'un null. 
+    const id = this.route.snapshot.paramMap.get('id'); 
     if (id) {
       this.videoService.getVideoById(+id) 
        .subscribe(resultat => this.selectedVideo = resultat);

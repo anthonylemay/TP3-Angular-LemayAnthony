@@ -1,4 +1,4 @@
-import { Video } from "./video";
+/*import { Video } from "./video";
 import { AUTEURS } from "./mock-auteurs";
 import { Reaction } from "./avis";
 import { CATEGORIES } from "./mock-categories";
@@ -32,16 +32,16 @@ export const VIDEOS: Video[] = [
                 auteur: AUTEURS[1],
                 note: 8,
                 commentaires: "commentaires 2",
-                reaction: null, // No reaction provided
-                date: null, // No date provided
+                reaction: null, 
+                date: null, 
             },
             {
                 id: 3,
                 auteur: AUTEURS[4],
                 note: 9.5,
                 commentaires: "commentaires 3",
-                reaction: null, // No reaction provided
-                date: null, // No date provided
+                reaction: null, 
+                date: null, 
             },
         ]
     },
@@ -66,7 +66,7 @@ export const VIDEOS: Video[] = [
                 note: 1,
                 commentaires: "commentaires 4",
                 reaction: Reaction.Dislike,
-                date: new Date("2023-11-01"), // Assuming a date for the example
+                date: new Date("2023-11-01"), 
             }
         ]
     },
@@ -91,7 +91,7 @@ export const VIDEOS: Video[] = [
                 note: 8,
                 commentaires: "commentaires 5",
                 reaction: Reaction.Like,
-                date: new Date("2023-12-15"), // Assuming a date for the example
+                date: new Date("2023-12-15"), 
             }
         ]
     },
@@ -116,7 +116,7 @@ export const VIDEOS: Video[] = [
                 note: 7,
                 commentaires: "commentaires 6",
                 reaction: Reaction.Dislike,
-                date: new Date("2024-01-20"), // Assuming a date for the example
+                date: new Date("2024-01-20"), 
             }
         ]
     },
@@ -141,7 +141,7 @@ export const VIDEOS: Video[] = [
                 note: 10,
                 commentaires: "commentaires 7",
                 reaction: Reaction.Like,
-                date: new Date("2024-02-01"), // Assuming a date for the example
+                date: new Date("2024-02-01"), 
             }
         ]
     },
@@ -165,9 +165,10 @@ export const VIDEOS: Video[] = [
                 auteur: AUTEURS[5],
                 note: 3,
                 commentaires: "commentaires 8",
-                reaction: null, // No reaction provided
-                date: null, // No date provided
+                reaction: null, 
+                date: null, 
             }
         ]
     }
 ];
+*/
