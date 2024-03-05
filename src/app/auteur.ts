@@ -1,4 +1,4 @@
-import { Coordonnee } from "./coordonnee";
+/*import { Coordonnee } from "./coordonnee";
 
 export interface Auteur {
     id?:number;
@@ -8,4 +8,14 @@ export interface Auteur {
     coordonnees: Coordonnee;
     description: string;
     url_pic: string;
+}
+*/
+
+export interface Auteur {
+    id?:number;
+    url_pic: string;
+    nom:string;
+    pseudo: string;
+    verifie: boolean;
+    description: string;
 }

@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Video } from './video';
-import { Categorie } from './categorie';
+import { Categorie } from './video';
+
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -22,10 +23,6 @@ export class VideoService {
   getVideoById(id: number): Observable<Video> {
     return this.http.get<Video>(`${this.API_URL}`+`?id=`+`${id}`);
   }
-  
-  getCategories(): Observable<Categorie[]> {
-    return this.http.get<Categorie[]>(`${this.API_URL}categories/`);
-  }
 
   addVideo(video:Video): Observable<void> {
     return this.http.post<void>(this.API_URL, video, httpOptions);
@@ -41,5 +38,8 @@ export class VideoService {
     return this.http.delete<void>(`${this.API_URL}`+`?id=`+`${id}`, httpOptions);
   }
 
+  getCategories(): Observable<Categorie[]> {
+    return this.http.get<Categorie[]>(`${this.API_URL}categories/`);
+  }
   
 }

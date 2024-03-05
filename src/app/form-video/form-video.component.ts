@@ -1,9 +1,8 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { VideoService } from '../video.service';
 import { Video } from '../video';
-import { Categorie } from '../categorie';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-form-video',
@@ -11,68 +10,78 @@ import { Categorie } from '../categorie';
   styleUrls: ['./form-video.component.scss']
 })
 export class FormVideoComponent implements OnInit {
-  categories: Categorie[] = [];
+  video!: Video;
 
   constructor(
     private videoService: VideoService,
     public dialogRef: MatDialogRef<FormVideoComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: Video) {
-      if (data) {
-        this.video = data;
-      }
-  }
+    @Inject(MAT_DIALOG_DATA) public data: Partial<Video> | null ) {}
 
   ngOnInit(): void {
-    this.fetchCategories();
+    this.video = { ...this.getDefaultVideo(), ...(this.data || {}) };
   }
 
-  fetchCategories(): void {
-    this.videoService.getCategories().subscribe(categories => {
-      this.categories = categories;
-    });
-  }
-
-
-  /*convertBooleansToNumbers(video: Video): any {
-    const convertedVideo = {
-      ...video,
-      closedcaption: video.closedcaption ? 1 : 0,
-      subtitle: video.subtitle ? 1 : 0,
+  getDefaultVideo(): Video {
+    return {
+      id: 0,
+      url_img: 'defaultImageURL',
+      nom: 'Default Name',
+      description: 'Default Description',
+      code: 'N/A',
+      categorie: { id: 0, nom: 'Default Category' },
+      auteur: {
+        id: 0,
+        nom: 'Default Author',
+        pseudo: 'DefaultPseudo',
+        verifie: false,
+        description: 'Default Description',
+        url_pic: 'defaultAvatarURL',
+        coordonnees: {
+          id: 0,
+          courriel: '',
+          facebook: '',
+          instagram: '',
+          twitch: '',
+          site_web: '',
+        }
+      },
+      date: new Date(),
+      duree: 0,
+      vues: 0,
+      score: 0,
+      closedcaption: false,
+      subtitle: false,
+      avis: [{
+        auteur: {
+          id: 0,
+          nom: 'Anonymous',
+          pseudo: 'Anonymous',
+          verifie: false,
+          description: 'Default Description',
+          url_pic: 'defaultAvatarURL',
+          coordonnees: {
+            id: 0,
+            courriel: '',
+            facebook: '',
+            instagram: '',
+            twitch: '',
+            site_web: '',
+          }
+        },
+        note: 0,
+        commentaires: 'No Comment',
+        reaction: null,
+        date: new Date()
+      }]
     };
-    console.log('Video avant conversion:', video);
-    console.log('Video après conversion à nombres', convertedVideo);
-    return convertedVideo;
-  } */
+  }
 
-  /* addVideo(formVideoAjout: NgForm) {
-    const videoToSend = this.convertBooleansToNumbers(this.video);
-    console.log('Sending video to API:', videoToSend);
-    this.videoService.addVideo(videoToSend).subscribe(_ => {
-      console.log('Video added successfully');
-      formVideoAjout.resetForm();
-      this.dialogRef.close("Vidéo ajoutée!");
-    }, error => {
-      console.error('Error adding video:', error);
-    });
-  } */
-  
-  
-  /* updateVideo(formVideoAjout: NgForm) {
-    const videoToUpdate = this.convertBooleansToNumbers(this.video);
-    console.log('mise à jour du contenu à venir:', videoToUpdate);
-    this.videoService.updateVideo(videoToUpdate).subscribe(
-      _ => {
-      console.log('Video mise à jour avec succès');
-      formVideoAjout.resetForm();
-      this.dialogRef.close("Vidéo modifiée!");
-    }, error => {
-      console.error('Erreur de modification:', error);
-    });
-  } */
+
+
 
 
   addVideo(formVideoAjout: NgForm) {
-    //if (formVideoAjout.valid) {
+    if (formVideoAjout.valid) {
       this.videoService.addVideo(this.video).subscribe(
         _ => {
           console.log(this.video);
@@ -80,61 +89,22 @@ export class FormVideoComponent implements OnInit {
           this.dialogRef.close("vidéo ajouté!");
         }
       );
-    //}
+    }
   }
 
   updateVideo(formVideoAjout: NgForm) {
-// ajouter la validation
+    if (formVideoAjout.valid) {
       this.videoService.updateVideo(this.video).subscribe(
         _ => {
           formVideoAjout.resetForm();
           this.dialogRef.close("Vidéo modifié!");
         }
       );
+      }
     }
   
-  onSubmit(form: NgForm) {
-    if (this.video.id) {
-      this.updateVideo(form);
-    } else {
-      this.addVideo(form);
-    }
-  }
-
   annuler() {
     this.dialogRef.close("Requête annulée");
   }
 
-  video: Video = {
-    url_img: "https://picsum.photos/200/300?random=1",
-    nom: "Vidéo Abc",
-    description: "Description courte",
-    code: "ABC000",
-    categorie: {
-      id:0,
-      nom: "",
-    },
-    auteur: {
-      id: 0,
-      nom: "",
-      pseudo: "",
-      verifie: false,
-      description:"",
-      url_pic:"",
-      coordonnees:{
-        site_web:"",
-        facebook:"",
-        instagram:"",
-        courriel: "",
-        twitch: ""
-      }
-    },
-    date: new Date(),
-    duree: 0,
-    closedcaption: false,
-    subtitle: false,
-    score: 0,
-    vues: 0,
-
-  };
 }

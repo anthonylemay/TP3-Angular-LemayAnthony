@@ -9,11 +9,12 @@ import { Categorie } from '../categorie';
   styleUrls: ['./liste-videos.component.scss']
 })
 export class ListeVideosComponent {
-  videos: Video[] = [];
+  video: Video[] = [];
   categories: Categorie[] = [];
   filteredVideos: Video[] = [];
   
   constructor(private videoService: VideoService) {}
+  
   
   ngOnInit(): void {
     this.getVideos();
@@ -22,20 +23,23 @@ export class ListeVideosComponent {
   
   getVideos(): void {
     this.videoService.getVideos().subscribe(resultat => {
-      this.videos = resultat;
+      this.video = resultat;
       this.filteredVideos = resultat; 
     });
   }
-  
+
   getCategories(): void {
-    this.videoService.getCategories().subscribe(resultat => this.categories = resultat);
+    this.videoService.getCategories().subscribe(categories => {
+      this.categories = categories;
+    });
   }
   
+
   filterVideosByCategory(categoryId: number | null ): void {
     if (categoryId) {
-      this.filteredVideos = this.videos.filter(v => v.categorie.id === categoryId);
+      this.filteredVideos = this.video.filter(v => v.categorie.id === categoryId);
     } else {
-      this.filteredVideos = [...this.videos]; // Reset à tout voir
+      this.filteredVideos = [...this.video]; // Reset à tout voir
     }
   }
   

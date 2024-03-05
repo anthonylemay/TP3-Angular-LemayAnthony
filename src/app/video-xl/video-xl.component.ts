@@ -1,53 +1,77 @@
-import { Component, Input } from '@angular/core';
-import {Video} from '../video'
-import { CATEGORIES } from '../mock-categories';
-import { AUTEURS } from '../mock-auteurs';
-
+import { Component, Input, OnInit } from '@angular/core';
+import { Video, Auteur, Categorie, Avis } from '../video';
 
 @Component({
   selector: 'app-video-xl',
   templateUrl: './video-xl.component.html',
   styleUrls: ['./video-xl.component.scss']
 })
+export class VideoXlComponent implements OnInit {
+  
+  @Input() videoInput?: Partial<Video>;
 
-export class VideoXlComponent {
+  video: Video;
 
+  constructor() {
+    this.video = this.getDefaultVideo();
+  }
 
+  ngOnInit(): void {
+    this.video = { ...this.getDefaultVideo(), ...this.videoInput };
+  }
 
-
-
-  @Input() video: Video = {
-    id: 0,
-    url_img: "",
-    nom: "Aucun Nom",
-    description: "Aucune Description",
-    code: "N/A",
-    categorie: CATEGORIES[0],
-    auteur: AUTEURS[6],
-    date: new Date,
-    duree: 0,
-    closedcaption: false,
-    subtitle: false,
-    score: 0,
-    vues: 0,
-    avis:[{
-      auteur: AUTEURS[6],
+  getDefaultVideo(): Video {
+    return {
       id: 0,
-      reaction: null, // s'assurer que ca fonctionne avec un enum. neutre au lieu de 0
-      date: null,
-      note: 0,
-      commentaires: "Aucuns Commentaires Trouvés"
-    }]
-  };
-
-// pour get par ID pour la page dédiée:
-
-  /*getVideoById(): void{ // fonction qui permet de get le ID du video target. Je dois valider si je dois aussi aller get cet info au niveau plus haut, pour que les paramètres suivent.
-    const id = this.route.snapshot.paramMap.get('id');
-    if (id) {
-      this.videoService.getVideoById(id)
-        .subscribe(result => {console.log(result); this.video = result});
-    }
-  } */
-
+      url_img: 'defaultImageURL',
+      nom: 'Default Name',
+      description: 'Default Description',
+      code: 'N/A',
+      categorie: { id: 0, nom: 'Default Category' },
+      auteur: {
+        id: 0,
+        nom: 'Default Author',
+        pseudo: 'DefaultPseudo',
+        verifie: false,
+        description: 'Default Description',
+        url_pic: 'defaultAvatarURL',
+        coordonnees: {
+          id: 0,
+          courriel: '',
+          facebook: '',
+          instagram: '',
+          twitch: '',
+          site_web: '',
+        }
+      },
+      date: new Date(),
+      duree: 0,
+      vues: 0,
+      score: 0,
+      closedcaption: false,
+      subtitle: false,
+      avis: [{
+        auteur: {
+          id: 0,
+          nom: 'Anonymous',
+          pseudo: 'Anonymous',
+          verifie: false,
+          description: 'Default Description',
+          url_pic: 'defaultAvatarURL',
+          coordonnees: {
+            id: 0,
+            courriel: '',
+            facebook: '',
+            instagram: '',
+            twitch: '',
+            site_web: '',
+          }
+        },
+        note: 0,
+        commentaires: 'No Comment',
+        reaction: null,
+        date: new Date()
+      }]
+    };
+  }
 }

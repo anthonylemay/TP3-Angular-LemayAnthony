@@ -1,9 +1,5 @@
-import {Avis} from "./avis"
-import {Auteur} from "./auteur"
-import {Categorie} from "./categorie"
-
 export interface Video {
-    id?: number;
+    id: number;
     url_img: string;
     nom: string;
     description: string;
@@ -16,5 +12,39 @@ export interface Video {
     score: number;
     closedcaption: boolean;
     subtitle: boolean;
-    avis?: Avis[];
+    avis: Avis[];
 }
+
+export interface Categorie {
+    id: number;
+    nom: string;
+}
+
+export interface Auteur {
+    id: number;
+    nom: string;
+    pseudo: string;
+    verifie: boolean;
+    description: string;
+    url_pic: string;
+    coordonnees: Coordonnees;
+}
+
+export interface Coordonnees {
+    id: number;
+    courriel: string;
+    facebook: string;
+    instagram: string;
+    twitch: string;
+    site_web: string;
+}
+
+export interface Avis {
+    auteur: Auteur;
+    note: number;
+    commentaires: string;
+    reaction: string | null;
+    date: Date;
+}
+
+

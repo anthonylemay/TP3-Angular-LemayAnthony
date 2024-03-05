@@ -7,8 +7,18 @@ import { Avis, Reaction } from '../avis'; // Ensure Reaction enum is exported an
   styleUrls: ['./ajout-avis.component.scss']
 })
 export class AjoutAvisComponent {
+
+  avis: Avis = {
+    video_id: 0,
+    auteur_id: 0,
+    reaction: null,
+    commentaires: "",
+    note: 0,
+    date: new Date()
+  };
+
   // Initial state with reaction set to null
-  ajoutavis: Avis = {
+ /* ajoutavis: Avis = {
     id: 0, // Assuming a temporary placeholder ID
     auteur: {
       id: 0, // Placeholder, assuming you'll replace with the actual auteur's data
@@ -29,24 +39,26 @@ export class AjoutAvisComponent {
     commentaires: "",
     reaction: null,
     date: null // va être push à la datetime actuelle.
-  };
+  };*/
+
+
 
   like() {
-    this.ajoutavis.reaction = Reaction.Like;
+    this.avis.reaction = Reaction.Like;
   }
 
   dislike() {
-    this.ajoutavis.reaction = Reaction.Dislike;
+    this.avis.reaction = Reaction.Dislike;
   }
 
   submit() {
-    this.ajoutavis.date = new Date();
+    this.avis.date = new Date();
     const dataToSend = {
-      ...this.ajoutavis,
-      date: this.ajoutavis.date.toISOString().replace('T', ' ').substring(0, 19) // Conversion en str pour avoir les secondes.
+      ...this.avis,
+      date: this.avis.date.toISOString().replace('T', ' ').substring(0, 19) // Conversion en str pour avoir les secondes.
     }; // à valider si ca fonctionne sur le backend pour le time avec date. 
 
-    console.log(this.ajoutavis);
+    console.log(this.avis);
     // ajout des focntionnalités de push sur le back
   }
 }
